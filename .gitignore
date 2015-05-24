@@ -1,7 +1,6 @@
+/build
+/.sass-cache
+/.cache
 node_modules
-npm-debug.log
-bower_components
-build
-config.js
 .DS_Store
-*.swp
+npm-debug.log
