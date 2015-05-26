@@ -1,0 +1,17 @@
+include ../../includes/_head.jade
+
+body
+  #holder
+    #content.container
+      include ../../includes/_header.jade
+      .row
+        section#work.twelve.columns
+        h3 Articles
+        each post in globals
+          article
+            a(href='#{post.shortname}')
+              h4= post.title
+            p #{post.description} Posted on #{post.date}.
+            p= post.abstract
+
+    include ../../includes/_footer.jade
