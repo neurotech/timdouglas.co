@@ -8,6 +8,8 @@ var exec = require('child_process').exec;
 var jadePath = process.argv[2];
 var base = process.argv[3];
 
+// To do: Create a function that produces a JSON file listing all articles/portfolio items called posts.json
+
 var _build = function(dir) {
   var dirName, f, files, fullPath, i, len, results, stat;
   files = fs.readdirSync(dir);
@@ -29,7 +31,7 @@ var _build = function(dir) {
       dirName = dirName.replace(jadePath, '');
       dirName = dirName.replace('//', '/');
       console.log("Compiling jade file '" + fullPath + "' to directory " + dirName);
-      results.push(exec('jade -o ' + dirName + ' ' + fullPath));
+      results.push(exec('jade -o ' + dirName + ' ' + fullPath + ' --obj' + ' db.json'));
     } else {
       results.push(void 0);
     }
