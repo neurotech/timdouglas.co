@@ -1,6 +1,11 @@
 include ../../includes/_head.jade
 
 body
-  include ../../includes/_header.jade
-    p work
-  include ../../includes/_footer.jade
+  #holder
+    #content.container
+      include ../../includes/_header.jade
+      .row
+        section#work.twelve.columns
+          h3 Work
+
+    include ../../includes/_footer.jade

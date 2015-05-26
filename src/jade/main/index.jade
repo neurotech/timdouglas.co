@@ -1,6 +1,33 @@
 include ../includes/_head.jade
 
 body
-  include ../includes/_header.jade
-    p /
-  include ../includes/_footer.jade
+  #holder
+    #content.container
+      include ../includes/_header.jade
+      .row
+        section#welcome.eight.columns
+          h3 Hello!
+          p My name's Tim and I &hearts; building things that are satisfying to use and beautiful to look at.
+          p Check out 
+            a(href='/work') some things I've made
+            | , 
+            a(href='/cv') learn more about me
+            | , 
+            a(href='/articles') or see what I'm writing about
+            | .
+
+        section#portrait.four.columns
+
+      .row
+        section#showcase
+          h3 What I've been working on:
+          .row
+            - var count = 0;
+            each post in globals
+              if count < 3
+                article.four.columns
+                  h4= post.title
+                  p= post.description
+              - count++;
+
+    include ../includes/_footer.jade
