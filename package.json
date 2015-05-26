@@ -4,7 +4,9 @@
   "description": "Source for http://timdouglas.co",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -r build/* && mkdir build/css build/cv build/work build/articles build/js",
+    "post": "node new-post.js",
+    "prebuild": "rm -r build/* && mkdir build/css build/js build/cv build/work build/articles && npm run build-articles",
+    "build-articles": "node build-articles.js",
     "build-html": "node build-jade.js src/jade/main build/",
     "build-js": "cp src/js/*.js build/js",
     "build-css": "stylus < src/stylus/all.styl | autoprefixer -b 'last 2 versions' | cssmin > build/css/main.css",
@@ -24,6 +26,8 @@
     "cssmin": "^0.4.3",
     "jade": "^1.9.2",
     "lowdb": "^0.7.3",
+    "moment": "^2.10.3",
+    "prompt": "^0.2.14",
     "stylus": "^0.51.1",
     "watch": "^0.16.0"
   }
