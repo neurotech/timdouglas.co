@@ -10,7 +10,8 @@
     "build-html": "node build-jade.js src/jade/main build/",
     "build-js": "cp src/js/*.js build/js",
     "build-css": "stylus < src/stylus/all.styl | autoprefixer -b 'last 2 versions' | cssmin > build/css/main.css",
-    "build": "npm run build-html && npm run build-js && npm run build-css",
+    "build-rss": "mv build/articles/rss.html build/articles/rss.xml",
+    "build": "npm run build-html && npm run build-js && npm run build-css && npm run build-rss",
     "watch": "watch 'npm run build' src/",
     "dev": "cd build && python -m SimpleHTTPServer 4567"
   },
