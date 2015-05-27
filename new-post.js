@@ -20,8 +20,8 @@ body\n\
           h3 " + result.title + "\n\
           h4 " + result.description + "\n\
           p\n\
-            em " + result.abstract + "\n\
-          //- Body goes here\n\
+            em " + result.abstract + "\n\n\
+          //- Body goes here\n\n\
     include ../../../includes/_footer.jade";
 
     db('globals').push({
