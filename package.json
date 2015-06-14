@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "post": "node new-post.js",
-    "prebuild": "rm -r build/* && mkdir build/css build/js build/cv build/work build/articles && npm run build-articles",
+    "prebuild": "rm -r build/* && mkdir build/css build/js build/svg build/resume build/work build/articles && npm run build-articles",
     "build-articles": "node build-articles.js",
     "build-html": "node build-jade.js src/jade/main build/",
     "build-js": "cp src/js/*.js build/js",
     "build-css": "stylus < src/stylus/all.styl | autoprefixer -b 'last 2 versions' | cssmin > build/css/main.css",
+    "build-svg": "cp src/svg/*.svg build/svg",
     "build-rss": "mv build/articles/rss.html build/articles/rss.xml",
-    "build": "npm run build-html && npm run build-js && npm run build-css && npm run build-rss",
+    "build": "npm run build-html && npm run build-js && npm run build-css && npm run build-svg && npm run build-rss",
     "watch": "watch 'npm run build' src/",
     "dev": "cd build && python -m SimpleHTTPServer 4567"
   },
