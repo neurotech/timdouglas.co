@@ -8,8 +8,6 @@ var exec = require('child_process').exec;
 var jadePath = process.argv[2];
 var base = process.argv[3];
 
-// To do: Create a function that produces a JSON file listing all articles/portfolio items called posts.json
-
 var _build = function(dir) {
   var dirName, f, files, fullPath, i, len, results, stat;
   files = fs.readdirSync(dir);
