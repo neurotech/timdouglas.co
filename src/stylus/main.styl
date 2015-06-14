@@ -13,6 +13,31 @@ html, body
 // Contact
 #contact-me
   text-align center
+  margin-bottom 2.5rem
+
+a
+  &.svg
+    position relative
+    display inline-block
+
+a
+  &.svg
+    &:after
+      content ""
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+
+.contact-icon
+  position relative
+  display inline-block
+  width 40px
+  height 40px
+
+.github-icon
+  fill red
 
 // Footer
 #holder
