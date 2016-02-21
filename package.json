@@ -17,12 +17,7 @@
   "author": "Tim Douglas",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^5.1.1",
-    "cssmin": "^0.4.3",
     "jade": "^1.9.2",
-    "lowdb": "^0.7.3",
-    "moment": "^2.10.3",
-    "prompt": "^0.2.14",
     "stylus": "^0.51.1",
     "watch": "^0.16.0"
   }
