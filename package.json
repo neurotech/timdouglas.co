@@ -16,9 +16,10 @@
   "private": true,
   "author": "Tim Douglas",
   "license": "ISC",
-  "devDependencies": {
-    "jade": "^1.9.2",
-    "stylus": "^0.51.1",
-    "watch": "^0.16.0"
+  "devDependencies": {},
+  "dependencies": {
+    "jade": "1.11.0",
+    "stylus": "0.53.0",
+    "watch": "0.17.1"
   }
 }
