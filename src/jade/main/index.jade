@@ -9,25 +9,10 @@ body
           h3 Hello!
           p My name's Tim and I &hearts; building things that are satisfying to use and beautiful to look at.
           p Check out 
-            a(href='/work') some things I've made
-            | , 
-            a(href='/resume') learn more about me
-            | , 
-            a(href='/articles') or see what I'm writing about
-            | .
+            a(href='#') some things I've made
+            | or
+            a(href='#') learn more about me.
 
         section#portrait.four.columns
-
-      .row
-        section#showcase
-          h3 What I've been working on:
-          .row
-            - var count = 0;
-            each post in globals
-              if count < 3
-                article.four.columns
-                  h4= post.title
-                  p= post.description
-              - count++;
 
     include ../includes/_footer.jade
