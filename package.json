@@ -4,10 +4,14 @@
   "description": "Source for http://timdouglas.co",
   "main": "index.js",
   "scripts": {
-    "prebuild": "echo 'Pre-build TBD'",
-    "build": "echo 'Build TBD'",
+    "prebuild": "rm -rf build/* && mkdir -p build/css build/images build/js build/css",
+    "build-css": "touch build/css/main.css && stylus < src/stylus/all.styl | cssmin > build/css/main.css",
+    "build": "jade --hierarchy -o build/ src/jade/main/ && cp src/svg/*.svg build/images && cp src/js/*.js build/js && npm run build-css",
     "watch": "watch 'npm run build' src/",
-    "dev": "cd build && python -m SimpleHTTPServer 4567"
+    "dev": "cd build && python -m SimpleHTTPServer 4567",
+    "docker-build": "./build.sh",
+    "docker-run": "./run.sh",
+    "docker-restart": "docker stop timdouglas-nginx && docker rm -v timdouglas-nginx && npm run docker-build && npm run docker-run"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,9 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
+    "cssmin": "0.4.3",
     "jade": "1.11.0",
+    "postcss-cli": "2.5.1",
     "stylus": "0.53.0",
     "watch": "0.17.1"
   }
