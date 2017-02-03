@@ -4,17 +4,14 @@
   "description": "Source for http://timdouglas.co",
   "main": "index.js",
   "scripts": {
-    "post": "node new-post.js",
-    "prebuild": "rm -r build/* && mkdir build/css build/js build/svg build/resume build/work build/articles && npm run build-articles",
-    "build-articles": "node build-articles.js",
-    "build-html": "node build-jade.js src/jade/main build/",
-    "build-js": "cp src/js/*.js build/js",
-    "build-css": "stylus < src/stylus/all.styl | autoprefixer -b 'last 2 versions' | cssmin > build/css/main.css",
-    "build-svg": "cp src/svg/*.svg build/svg",
-    "build-rss": "mv build/articles/rss.html build/articles/rss.xml",
-    "build": "npm run build-html && npm run build-js && npm run build-css && npm run build-svg && npm run build-rss",
+    "prebuild": "rm -rf build/* && mkdir -p build/css build/images build/js build/css",
+    "build-css": "touch build/css/main.css && stylus < src/stylus/all.styl | cssmin > build/css/main.css",
+    "build": "jade --hierarchy -o build/ src/jade/main/ && cp src/svg/*.svg build/images && cp src/js/*.js build/js && npm run build-css",
     "watch": "watch 'npm run build' src/",
-    "dev": "cd build && python -m SimpleHTTPServer 4567"
+    "dev": "cd build && python -m SimpleHTTPServer 4567",
+    "docker-build": "./build.sh",
+    "docker-run": "./run.sh",
+    "docker-restart": "docker stop timdouglas-nginx && docker rm -v timdouglas-nginx && npm run docker-build && npm run docker-run"
   },
   "repository": {
     "type": "git",
@@ -23,14 +20,12 @@
   "private": true,
   "author": "Tim Douglas",
   "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^5.1.1",
-    "cssmin": "^0.4.3",
-    "jade": "^1.9.2",
-    "lowdb": "^0.7.3",
-    "moment": "^2.10.3",
-    "prompt": "^0.2.14",
-    "stylus": "^0.51.1",
-    "watch": "^0.16.0"
+  "devDependencies": {},
+  "dependencies": {
+    "cssmin": "0.4.3",
+    "jade": "1.11.0",
+    "postcss-cli": "2.5.1",
+    "stylus": "0.53.0",
+    "watch": "0.17.1"
   }
 }
