@@ -4,14 +4,15 @@
   "description": "Source for http://timdouglas.co",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf build/* && mkdir -p build/css build/images build/js build/css",
-    "build-css": "touch build/css/main.css && stylus < src/stylus/all.styl | cssmin > build/css/main.css",
-    "build": "jade --hierarchy -o build/ src/jade/main/ && cp src/svg/*.svg build/images && cp src/js/*.js build/js && npm run build-css",
-    "watch": "watch 'npm run build' src/",
-    "dev": "cd build && python -m SimpleHTTPServer 4567",
-    "docker-build": "./build.sh",
-    "docker-run": "./run.sh",
-    "docker-restart": "docker stop timdouglas-nginx && docker rm -v timdouglas-nginx && npm run docker-build && npm run docker-run"
+    "prebuild": "",
+    "tachyons": "cp node_modules/tachyons/css/tachyons.min.css build/css",
+    "postcss": "postcss -u postcss-cssnext -o build/css/index.css src/css/index.pcss",
+    "build-css": "npm run tachyons && npm run postcss",
+    "build": "pug src/pug/index.pug --out build/ && pug src/pug/cv/index.pug --out build/cv && npm run build-css",
+    "watch": "watch --interval 2 'yarn run build' src/",
+    "browser-sync": "browser-sync start --server build --files 'build/index.html, build/cv/index.html, build/css/index.css, build/index.js'",
+    "dev": "echo TBD",
+    "tach": "tachyons --help"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,15 @@
   "private": true,
   "author": "Tim Douglas",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.9.0",
+    "semistandard": "^9.2.1",
+    "tachyons": "^4.6.2",
+    "watch": "^1.0.1"
+  },
   "dependencies": {
-    "cssmin": "0.4.3",
-    "jade": "1.11.0",
-    "postcss-cli": "2.5.1",
-    "stylus": "0.53.0",
-    "watch": "0.17.1"
+    "pug": "^2.0.0-beta10",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
