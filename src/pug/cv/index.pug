@@ -1,0 +1,92 @@
+doctype
+html(lang='en-AU')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/tachyons.min.css')
+    link(rel='stylesheet', href='../css/index.css')
+    title Tim Douglas
+
+  body.pa3.avenir.fw4.f4.tim-text
+    main.mw7-ns.center
+      article.tim-solid-line.mb4.cf
+        section.fl.w-100.w-50-ns
+          a(href="/" id="tim-douglas").no-underline
+            h1.mv2.fw6.tim-header Tim Douglas
+        section.fl.w-100.w-50-ns.tl.tr-ns
+          h2.mv3.fw4 Curriculum Vitae
+
+      article.cf.mb3
+        h3.mt2.mb1.pb1.f3.fw6.tim-header.tim-dashed-line Employment
+        section.fl.w-100.w-50-ns.pv2.pr3-ns
+          p.mv2.f3.fw6.tim-emphasis e-Learning Manager
+          p.mv2.fw5 Rosebank College
+          p.mv2.tim-text-lite September 2008 to present
+
+        section.fl.w-100.w-50-ns.pv2.pl3-ns
+          p.mv2.f3.fw6.tim-emphasis e-Learning Developer
+          p.mv2.fw5 Stella Maris College
+          p.mv2.tim-text-lite April 2004 to July 2008
+
+      article.cf
+          h3.mt2.mb1.pb1.fw6.tim-header.tim-dashed-line Technologies
+          section.fl.w-100.w-50-ns.pv2.pr3-ns
+            div.fl.w-70
+              p.mv2.f3.fw6.tim-emphasis JavaScript
+              p.mt2.mb4.tim-text-lite Node.js, web
+            div.fl.w-30
+              include ../includes/_rating-four
+
+            div.fl.w-70
+              p.mv2.f3.fw6.tim-emphasis Front End
+              p.mt2.mb4.tim-text-lite HTML, CSS, jQuery, Vue.js
+            div.fl.w-30
+              include ../includes/_rating-four
+
+          section.fl.w-100.w-50-ns.pv2.pl3-ns
+            div.fl.w-70
+              p.mv2.f3.fw6.tim-emphasis Databases
+              p.mt2.mb4.tim-text-lite DB2, PostgreSQL
+            div.fl.w-30
+              include ../includes/_rating-three
+
+            div.fl.w-70
+              p.mv2.f3.fw6.tim-emphasis DevOps
+              p.mt2.mb4.tim-text-lite Docker, Rollbar
+            div.fl.w-30
+              include ../includes/_rating-two
+
+      article.mt4
+        section.w-100.tim-solid-line
+          h3.mt2.mb1.pb1.fw6.tim-header.tim-dashed-line Skills &amp; Achievements
+          p.mv2.f3.fw6.tim-emphasis.pv2 Edumate at Rosebank College
+          ul.lh-copy.mt3.mb4
+            li.mv1 Implemented, managed, and maintained Edumate since 2012.
+            li.mv1 Produced over 150 custom reports direction from DB2, written in SQL.
+            li.mv1 Created and maintained a Node.js application which integrated with Edumate; along with a live reporting dashboard (Vue.js)
+            li.mv1 Created a cross-platform desktop application to aid with everyday diagnostics (using Electron/Vue.js)
+            li.mv1 Provided Edumate training to teaching and support sta  in the form of presentations, handouts, and screencasts.
+
+          p.mv2.f3.fw6.tim-emphasis Canvas at Rosebank College
+          ul.lh-copy.mt3.mb4
+            li.mv1 Successfully implemented Canvas as a replacement for Moodle in 2015.
+            li.mv1 Built a Node.js application that automatically synchronises and transforms data between Canvas and Edumate. (Docker, NGINX, PostgreSQL)
+            li.mv1 Customised several elements of Canvas’ UI using jQuery/JS and CSS.
+
+          p.mv2.f3.fw6.tim-emphasis Moodle at Rosebank College
+          ul.lh-copy.mt3.mb4
+            li.mv1 Planned and completed the implementation of Moodle as the first LMS for Rosebank College.
+            li.mv1 Designed and developed a completely custom Moodle theme (HTML/CSS) to ensure visual flow between systems within the school.
+
+          p.mv2.f3.fw6.tim-emphasis Miscellaneous
+          ul.lh-copy.mt3.mb4
+            li.mv1 Proficient in visual design (Sketch)
+            li.mv1 Published two modules to the npm registry (#[a(href='https://www.npmjs.com/package/node-edumate') node-edumate], #[a(href='https://www.npmjs.com/package/canvas-api') canvas-api])
+            li.mv1 Familiar with HipChat &amp; Confluence
+
+        section.w-100.tc.tl-ns.pt3
+          em References available upon request.
+
+  include ../includes/_ga
