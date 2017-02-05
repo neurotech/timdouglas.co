@@ -4,15 +4,13 @@
   "description": "Source for http://timdouglas.co",
   "main": "index.js",
   "scripts": {
-    "prebuild": "",
     "tachyons": "cp node_modules/tachyons/css/tachyons.min.css build/css",
     "postcss": "postcss -u postcss-cssnext -o build/css/index.css src/css/index.pcss",
     "build-css": "npm run tachyons && npm run postcss",
     "build": "pug src/pug/index.pug --out build/ && pug src/pug/cv/index.pug --out build/cv && npm run build-css",
     "watch": "watch --interval 2 'yarn run build' src/",
     "browser-sync": "browser-sync start --server build --files 'build/index.html, build/cv/index.html, build/css/index.css, build/index.js'",
-    "dev": "echo TBD",
-    "tach": "tachyons --help"
+    "deploy": "s3cmd sync ./build/ s3://timdouglas.co/"
   },
   "repository": {
     "type": "git",
@@ -21,6 +19,11 @@
   "private": true,
   "author": "Tim Douglas",
   "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 9"
+  ],
   "devDependencies": {
     "postcss-cli": "^2.6.0",
     "postcss-cssnext": "^2.9.0",
