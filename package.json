@@ -4,13 +4,17 @@
   "description": "Source for http://timdouglas.co",
   "main": "index.js",
   "scripts": {
-    "tachyons": "cp node_modules/tachyons/css/tachyons.min.css build/css",
+    "prebuild": "mkdir -p build/images/ build/css/ build/js/",
+    "tachyons": "cp node_modules/tachyons/css/tachyons.min.css build/css/",
     "postcss": "postcss -u postcss-cssnext -o build/css/index.css src/css/index.pcss",
-    "build-css": "npm run tachyons && npm run postcss",
-    "build": "pug src/pug/index.pug --out build/ && pug src/pug/cv/index.pug --out build/cv && npm run build-css",
-    "watch": "watch --interval 2 'yarn run build' src/",
-    "browser-sync": "browser-sync start --server build --files 'build/index.html, build/cv/index.html, build/css/index.css, build/index.js'",
-    "deploy": "s3cmd sync ./build/ s3://timdouglas.co/"
+    "build-css": "yarn run tachyons && yarn run postcss",
+    "build-images": "cp src/images/* build/images/",
+    "build-favicon": "cp src/favicon.png build/favicon.png",
+    "build": "pug src/pug/index.pug --out build/ && pug src/pug/cv/index.pug --out build/cv && pug src/pug/work/index.pug --out build/work && yarn run build-images && yarn run build-favicon && yarn run build-css",
+    "watch": "watch --interval 1 'yarn run build' src/",
+    "browser-sync": "browser-sync start --server build --files 'build/index.html, build/cv/index.html, build/work/index.html, build/css/index.css, build/index.js'",
+    "predeploy": "yarn run build",
+    "deploy": "./s3.sh"
   },
   "repository": {
     "type": "git",
@@ -24,15 +28,16 @@
     "last 2 versions",
     "ie >= 9"
   ],
+  "stylelint": "",
   "devDependencies": {
-    "postcss-cli": "^2.6.0",
-    "postcss-cssnext": "^2.9.0",
     "semistandard": "^9.2.1",
-    "tachyons": "^4.6.2",
     "watch": "^1.0.1"
   },
   "dependencies": {
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.9.0",
     "pug": "^2.0.0-beta10",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "tachyons": "^4.6.2"
   }
 }
