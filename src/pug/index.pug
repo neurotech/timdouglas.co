@@ -1,32 +1,19 @@
-doctype
-html(lang='en-AU')
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='css/index.css')
-    link(rel='stylesheet', href='css/tachyons.min.css')
-    title Tim Douglas
+include includes/_header
 
   body.pa3.avenir.fw4.tim-text
-    main.mw7-ns.center
+    main#front.center
       article
         section.fw4
-          h1.f2.f1-ns.tim-header#hello Hello!
+          h1.f3.f1-ns.tim-header#hello Hello!
           #welcome
-            p.f3.f2-ns(style='animation-delay: 500ms;') I'm Tim, a front end developer working in Sydney, Australia.
-            p.f3.f2-ns(style='animation-delay: 1000ms;') I build practical systems and beautiful interfaces.
-            p.f3.f2-ns(style='animation-delay: 1500ms;') Take a look at #[a(href='/work').no-underline some of my work], my #[a(href='/cv').no-underline CV], or get in touch with me:
+            p.f4.f2-ns(style='animation-delay: 500ms;') I'm Tim, a front end developer working in Sydney, Australia.
+            p.f4.f2-ns(style='animation-delay: 1000ms;') I build practical systems and beautiful interfaces.
+            p.f4.f2-ns(style='animation-delay: 1500ms;') Take a look at #[a(href='/work').no-underline some of my work], my #[a(href='/cv').no-underline CV], or get in touch with me:
 
       article.fw4.f3.f2-ns.cf
         #welcome
-          section.fl.w-100.w-50-ns.pv2.tc.tl-ns
+          section.fl.w-100.pv2.tl
             a(href='mailto:hello@timdouglas.co' style='animation-delay: 2000ms;').no-underline hello@timdouglas.co
-          section.fl.w-100.w-50-ns.pv2.tc.tr-ns
-            a(href='https://github.com/neurotech' style='animation-delay: 2500ms;').no-underline github.com/neurotech
 
-      #welcome
-        footer(style='animation-delay: 3500ms;').tc.pt4.pt5-ns.f4.f3-ns.td-text-lite Made with #[a(href='https://atom.io/' title='Atom is pretty fantastic.').no-underline Atom], #[a(href='http://www.aeropress.com.au/' title='AeroPress').no-underline coffee], and a #[a(href='http://www.kungfugrippe.com/post/169873399/clackity-noise' title='Making the Clackity Noise').no-underline clicky keyboard].
-
-  include includes/_ga
+      #welcome.i.tc.tr-ns.pt3.pt5-ns.fw4.f5.f3-ns.td-text-lite
+        footer(style='animation-delay: 3500ms;').pt3 Made with #[a(href='https://atom.io/' title='Atom is pretty fantastic.').no-underline Atom], #[a(href='http://www.aeropress.com.au/' title='AeroPress').no-underline coffee], and a #[a(href='http://www.kungfugrippe.com/post/169873399/clackity-noise' title='Making the Clackity Noise').no-underline clicky keyboard].
