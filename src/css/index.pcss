@@ -1,24 +1,6 @@
 /* Variables */
 
-/*:root {
-  --tim-header: #3A5DFF;
-  --tim-text: #4B61CA;
-  --tim-emphasis: #213AB1;
-  --tim-subtitle: #9FAAE0;
-  --tim-solid-line: #D9E0F0;
-  --tim-dashed-line: #93A8D3;
-  --tim-link: #3A5DFF;
-  --tim-grey: #AAAAAA;
-  --rating-four: #78AE3D;
-  --rating-three: #F1C40E;
-  --rating-two: #E74C3C;
-  --rating-bg: #D9DEEC;
-  --rating-padding: .55rem;
-  --rating-margin: .70rem;
-}*/
-
 :root {
-  /*--tim-header: #4863BA;*/
   --tim-header: #5077f3;
   --tim-text: #444D7C;
   --tim-solid-line: #D9E0F0;
@@ -28,7 +10,7 @@
   --tim-subtitle: #848BAD;
   --tim-link: #3A5DFF;
   --rating-four: #78AE3D;
-  --rating-three: #F1C40E;
+  --rating-three: #FFD632;
   --rating-two: #E74C3C;
   --rating-bg: #E4E8F2;
   --rating-padding: .55rem;
@@ -40,9 +22,36 @@
   background: var(--tim-header);
 }
 
+#front {
+  max-width: 50rem;
+  line-height: 1.3;
+}
+
+#cv {
+  max-width: 48rem;
+}
+
+#work {
+  max-width: 66rem;
+  & hr {
+    background: none;
+    border: 0;
+    height: 0;
+    border-top: 2px dashed var(--tim-solid-line);
+  }
+}
+
+#work-header {
+  max-width: 64rem;
+}
+
+#projects {
+  max-width: 66rem;
+}
+
 h1#hello {
   animation-name: hello;
-  animation-duration: 500ms;
+  animation-duration: 400ms;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
 }
@@ -53,6 +62,21 @@ h1#hello {
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
   animation-fill-mode: backwards;
+}
+
+#welcome footer {
+  color: color(var(--tim-text) a(30%));
+  border-color: color(var(--tim-text) a(10%));
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-width: .125rem;
+  & a {
+    color: color(var(--tim-text) a(45%));
+    font-weight: 500;
+  }
+  & a:hover {
+    color: color(var(--tim-text) a(70%));
+  }
 }
 
 @keyframes hello {
@@ -77,20 +101,17 @@ h1#hello {
   transform: translateX(-0.3rem);
 }
 
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--tim-header);
+  transition: all 0.10s ease-in-out;
+}
+a:active, a:focus, a:visited { color: var(--tim-header); }
+a:hover { color: var(--rating-three); }
+
 .tim-text {
   color: var(--tim-text);
-  & a {
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--tim-header);
-    transition: all 0.10s ease-in-out;
-  }
-  & a:active, a:focus, a:visited {
-    color: var(--tim-header);
-  }
-  & a:hover {
-    color: var(--rating-three);
-  }
 }
 .tim-header { color: var(--tim-header); }
 .tim-emphasis { color: var(--tim-emphasis); }
