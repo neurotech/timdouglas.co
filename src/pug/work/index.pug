@@ -1,38 +1,38 @@
+- var title = ' - Work'
 include ../includes/_header
 
   body.pa3.avenir.fw4.f4.tim-text
     main#work.center
-      article#work-header.tim-solid-line.mb4.center.cf
+      article.tim-solid-line.mb4.cf
         section.fl.w-100.w-50-ns
           a(href="/" id="tim-douglas").no-underline
             h1.mv2.fw6.tim-header Tim Douglas
         section.fl.w-100.w-50-ns.tl.tr-ns
           h2.mv3.fw4 Work &amp; Projects
 
-      article#projects
-        section.fl.w-50.pa3.tl
-          img(src="http://placehold.it/300x100").w-100
-          p.tc.mt2 dispatch
+      article
+        section.w-100.pa3.pa4-ns.mb4.br3#project
+          a(href="/work/spanner")
+            h3.pa0.ma0.mb3.f2.fw6 Spanner
+            p.ma0.f4.f3-ns.fw4.lh-copy A cross-platform application that consumes and renders data from a HTTP-based API to assist in the management of Edumate.
 
-        section.fl.w-50.pa3.tr
-          img(src="http://placehold.it/300x100").w-100
-          p.tc.mt2 Spanner
+        section.w-100.pa3.pa4-ns.mb4.br3#project
+          a(href="/work/dispatch")
+            h3.pa0.ma0.mb3.f2.fw6 dispatch
+            p.ma0.f4.f3-ns.fw4.lh-copy A Node.js application that synchronises tasks and marks between Edumate and Canvas.
 
-        section.fl.w-50.pa3
-          img(src="http://placehold.it/300x100").w-100
-          p.tc.mt2 canvas-api
+        section.w-100.pa3.pa4-ns.mb4.br3#project
+          a(href="/work/canvas-api")
+            h3.pa0.ma0.mb3.f2.fw6 canvas-api
+            p.ma0.f4.f3-ns.fw4.lh-copy A collection of helper methods for the Canvas LMS API.
 
-        section.fl.w-50.pa3
-          img(src="http://placehold.it/300x100").w-100
-          p.tc.mt2 Picnic
+        section.w-100.pa3.pa4-ns.mb4.br3#project
+          a(href="/work/picnic")
+            h3.pa0.ma0.mb3.f2.fw6 Picnic
+            p.ma0.f4.f3-ns.fw4.lh-copy A dashboard application that displays timely and useful information about staff absences, school events, and room changes.
 
-        section.fl.w-50.pa3
-          img(src="http://placehold.it/300x100").w-100
-          p.tc.mt2 edumate-api
 
-      //- article.mb3
-      //-   h3.mt2.mb1.pb1.fw6.tim-header.tim-dashed-line Project Name
-      //-   h4 Subtitle
-      //-   p Description
-      //-   img(src="http://placehold.it/800x400").w-100
-      //- hr
+        section.w-100.pa3.pa4-ns.mb4.br3#project
+          a(href="/work/edumate-api")
+            h3.pa0.ma0.mb3.f2.fw6 edumate-api
+            p.ma0.f4.f3-ns.fw4.lh-copy A collection of endpoints that serve various datasets from Edumate.
