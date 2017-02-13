@@ -10,9 +10,9 @@
     "build-css": "yarn run tachyons && yarn run postcss",
     "build-images": "cp src/images/* build/images/",
     "build-favicon": "cp src/favicon.png build/favicon.png",
-    "build": "pug src/pug/index.pug --out build/ && pug src/pug/cv/index.pug --out build/cv && pug src/pug/work/index.pug --out build/work && yarn run build-images && yarn run build-favicon && yarn run build-css",
+    "build": "pug src/pug/ --out build/ && rm -rf build/includes && yarn run build-css",
     "watch": "watch --interval 1 'yarn run build' src/",
-    "browser-sync": "browser-sync start --server build --files 'build/index.html, build/cv/index.html, build/work/index.html, build/css/index.css, build/index.js'",
+    "browser-sync": "browser-sync start --server build --files 'build/**/*.*'",
     "predeploy": "yarn run build",
     "deploy": "./s3.sh"
   },
