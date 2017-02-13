@@ -1,6 +1,5 @@
-/* Variables */
-
 :root {
+  /*--tim-header: #ff5b8b;*/
   --tim-header: #5077f3;
   --tim-text: #444D7C;
   --tim-solid-line: #D9E0F0;
@@ -8,13 +7,24 @@
   --tim-grey: #AAAAAA;
   --tim-emphasis: #001350;
   --tim-subtitle: #848BAD;
-  --tim-link: #3A5DFF;
+  --tim-link: #5077f3;
+  /*--tim-project: #ff5b8b;*/
+  --tim-project: #45B87D;
   --rating-four: #78AE3D;
   --rating-three: #FFD632;
   --rating-two: #E74C3C;
   --rating-bg: #E4E8F2;
   --rating-padding: .55rem;
   --rating-margin: .70rem;
+  --tech-node: #63BA46;
+  --tech-npm: #ff9c21;
+  --tech-psql: #009DD0;
+  --tech-electron: #2D8595;
+  --tech-vue: #2BB784;
+  --tech-sass: #CB568B;
+  --tech-pug: #AC6452;
+  --tech-edumate: #5077f3;
+  --tech-canvas: #E42D07;
 }
 
 ::selection {
@@ -27,26 +37,45 @@
   line-height: 1.3;
 }
 
-#cv {
-  max-width: 48rem;
-}
-
 #work {
-  max-width: 66rem;
+  max-width: 50rem;
   & hr {
-    background: none;
-    border: 0;
-    height: 0;
-    border-top: 2px dashed var(--tim-solid-line);
+    height: 2px;
+    border: none;
+    background-color: var(--tim-solid-line);
   }
 }
 
-#work-header {
-  max-width: 64rem;
+#project {
+  transition: all 0.15s ease-in-out;
+  border: 2px solid color(var(--tim-project) a(10%));
+  background-color: white;
+  & a {
+    color: var(--tim-project);
+  }
+  & h3 {
+    transition: all 0.15s ease-in-out;
+    color: var(--tim-project);
+  }
+  & p {
+    color: color(var(--tim-project) blackness(50%));
+  }
 }
 
-#projects {
-  max-width: 66rem;
+#project:hover {
+  border: 2px solid color(var(--tim-project) a(30%));
+  background-color: color(var(--tim-project) a(4%));
+  transform: scale(1.05);
+  & h3 {
+    color: color(var(--tim-project) blackness(42%));
+  }
+  & p {
+    color: color(var(--tim-project) blackness(60%));
+  }
+}
+
+#cv {
+  max-width: 48rem;
 }
 
 h1#hello {
@@ -104,10 +133,10 @@ h1#hello {
 a {
   font-weight: 600;
   text-decoration: none;
-  color: var(--tim-header);
+  color: var(--tim-link);
   transition: all 0.10s ease-in-out;
 }
-a:active, a:focus, a:visited { color: var(--tim-header); }
+a:active, a:focus, a:visited { color: var(--tim-link); }
 a:hover { color: var(--rating-three); }
 
 .tim-text {
@@ -150,3 +179,14 @@ a:hover { color: var(--rating-three); }
   padding-top: var(--rating-padding);
   padding-bottom: var(--rating-padding);
 }
+
+.tech { color: white; }
+.tech.node { background-color: var(--tech-node); }
+.tech.npm { background-color: var(--tech-npm); }
+.tech.psql { background-color: var(--tech-psql); }
+.tech.electron { background-color: var(--tech-electron); }
+.tech.vue { background-color: var(--tech-vue); }
+.tech.sass { background-color: var(--tech-sass); }
+.tech.pug { background-color: var(--tech-pug); }
+.tech.edumate { background-color: var(--tech-edumate); }
+.tech.canvas { background-color: var(--tech-canvas); }
