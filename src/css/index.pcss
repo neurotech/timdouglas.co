@@ -1,14 +1,17 @@
 :root {
-  /*--tim-header: #ff5b8b;*/
   --tim-header: #5077f3;
   --tim-text: #444D7C;
   --tim-solid-line: #D9E0F0;
   --tim-dashed-line: #93A8D3;
-  --tim-grey: #AAAAAA;
   --tim-emphasis: #001350;
   --tim-subtitle: #848BAD;
   --tim-link: #5077f3;
-  /*--tim-project: #ff5b8b;*/
+  --tim-link-hover: #ff5b8b;
+  --tim-grey: #AAAAAA;
+  --tim-red: #E74C3C;
+  --tim-yellow: #FFD632;
+  --tim-green: #45B87D;
+  --tim-purple: #BE87EC;
   --tim-project: #45B87D;
   --rating-four: #78AE3D;
   --rating-three: #FFD632;
@@ -108,6 +111,60 @@ h1#hello {
   }
 }
 
+#contact-button {}
+#contact-method {
+  transition: all 0.15s ease-in-out;
+  color: white;
+  border-style: solid;
+  border-width: 0.15rem;
+  border-radius: .4rem 0 0 .4rem;
+  border-right-width: 0.07rem;
+  box-shadow: inset 0 0.15rem 0 0 color(white a(15%)), inset 0 -0.15rem 0 0 color(black a(15%));
+  &.purple {
+    border-color: var(--tim-text);
+    background-color: var(--tim-text);
+  }
+  &.green {
+    border-color: var(--tim-green);
+    background-color: var(--tim-green);
+  }
+  &.red {
+    border-color: var(--tim-red);
+    background-color: var(--tim-red);
+  }
+}
+#contact-address {
+  transition: all 0.15s ease-in-out;
+  border-style: solid;
+  border-width: 0.15rem;
+  border-radius: 0 .4rem .4rem 0;
+  border-left-width: 0.07rem;
+  &.purple {
+    color: var(--tim-text);
+    border-color: var(--tim-text);
+    &:hover {
+      color: white;
+      background-color: color(var(--tim-text) a(65%));
+    }
+  }
+  &.green {
+    color: var(--tim-green);
+    border-color: var(--tim-green);
+    &:hover {
+      color: white;
+      background-color: var(--tim-green);
+    }
+  }
+  &.red {
+    color: var(--tim-red);
+    border-color: var(--tim-red);
+    &:hover {
+      color: white;
+      background-color: var(--tim-red);
+    }
+  }
+}
+
 @keyframes hello {
   0% { opacity: 0; transform: translateX(-15rem); }
   50% { opacity: 1; transform: translateX(1rem); }
@@ -126,7 +183,7 @@ h1#hello {
 }
 
 #tim-douglas:hover h1 {
-  color: var(--rating-three);
+  color: var(--tim-yellow);
   transform: translateX(-0.3rem);
 }
 
@@ -137,7 +194,10 @@ a {
   transition: all 0.10s ease-in-out;
 }
 a:active, a:focus, a:visited { color: var(--tim-link); }
-a:hover { color: var(--rating-three); }
+a:hover {
+  background-color: var(--tim-link-hover);
+  color: white;
+}
 
 .tim-text {
   color: var(--tim-text);
