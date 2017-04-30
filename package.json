@@ -12,7 +12,7 @@
     "build-favicon": "cp src/favicon.png build/favicon.png",
     "build": "pug src/pug/ --out build/ && rm -rf build/includes && yarn run build-css",
     "watch": "watch --interval 1 'yarn run build' src/",
-    "browser-sync": "browser-sync start --server build --files 'build/**/*.*'",
+    "browser-sync": "browser-sync start --server build --files '**/*.htm' '**/*.js' '**/index.css' '**/*.html'",
     "predeploy": "yarn run build",
     "deploy": "./s3.sh"
   },
@@ -30,8 +30,8 @@
   ],
   "stylelint": "",
   "devDependencies": {
-    "semistandard": "^9.2.1",
-    "watch": "^1.0.1"
+    "semistandard": "10.0.0",
+    "watch": "1.0.2"
   },
   "dependencies": {
     "postcss-cli": "^2.6.0",
