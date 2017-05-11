@@ -19,15 +19,10 @@
   --rating-bg: #E4E8F2;
   --rating-padding: .55rem;
   --rating-margin: .70rem;
-  --tech-node: #63BA46;
-  --tech-npm: #ff9c21;
-  --tech-psql: #009DD0;
-  --tech-electron: #2D8595;
-  --tech-vue: #2BB784;
-  --tech-sass: #CB568B;
-  --tech-pug: #AC6452;
-  --tech-edumate: #5077f3;
-  --tech-canvas: #E42D07;
+  --gem-red: #FF5656;
+  --gem-blue: #20A0FF;
+  --gem-yellow: #FFC337;
+  --gem-green: #12CE66;
 }
 
 ::selection {
@@ -51,34 +46,59 @@
 
 #project {
   transition: all 0.15s ease-in-out;
-  border: 2px solid color(var(--tim-project) a(10%));
+  border: 2px solid color(var(--tim-header) a(10%));
   background-color: white;
   & a {
-    color: var(--tim-project);
+    color: var(--tim-header);
   }
   & h3 {
     transition: all 0.15s ease-in-out;
-    color: var(--tim-project);
+    color: var(--tim-header);
   }
   & p {
-    color: color(var(--tim-project) blackness(50%));
+    transition: all 0.15s ease-in-out;
+    color: color(var(--tim-header) blackness(50%));
   }
 }
 
 #project:hover {
-  border: 2px solid color(var(--tim-project) a(30%));
-  background-color: color(var(--tim-project) a(4%));
-  transform: scale(1.05);
+  border: 2px solid color(var(--tim-header) a(30%));
+  background-color: color(var(--tim-header) a(4%));
+  transform: scale(1.033);
   & h3 {
-    color: color(var(--tim-project) blackness(42%));
+    color: color(var(--tim-header) a(80%));
   }
   & p {
-    color: color(var(--tim-project) blackness(60%));
+    color: color(var(--tim-header) blackness(50%) a(80%));
   }
 }
 
 #cv {
   max-width: 48rem;
+}
+
+#services {
+  max-width: 50rem;
+}
+
+#gem {
+  & polygon#lite { fill: white; }
+  & polygon#liter { fill: white; }
+  & polygon#litest { fill: white; }
+  & polygon#under { fill: white; }
+}
+
+.gem-red svg {
+  & polygon#base { fill: var(--gem-red); }
+}
+.gem-blue svg {
+  & polygon#base { fill: var(--gem-blue); }
+}
+.gem-yellow svg {
+  & polygon#base { fill: var(--gem-yellow); }
+}
+.gem-green svg {
+  & polygon#base { fill: var(--gem-green); }
 }
 
 h1#hello {
@@ -88,7 +108,7 @@ h1#hello {
   animation-iteration-count: 1;
 }
 
-#welcome p, a, footer {
+#welcome p, #welcome a, #welcome footer {
   animation-name: fade;
   animation-duration: 600ms;
   animation-timing-function: ease-in;
@@ -119,49 +139,20 @@ h1#hello {
   border-width: 0.15rem;
   border-radius: .4rem 0 0 .4rem;
   border-right-width: 0.07rem;
-  box-shadow: inset 0 0.15rem 0 0 color(white a(15%)), inset 0 -0.15rem 0 0 color(black a(15%));
-  &.purple {
-    border-color: var(--tim-text);
-    background-color: var(--tim-text);
-  }
-  &.green {
-    border-color: var(--tim-green);
-    background-color: var(--tim-green);
-  }
-  &.red {
-    border-color: var(--tim-red);
-    background-color: var(--tim-red);
-  }
+  border-color: var(--tim-header);
+  background-color: var(--tim-header);
 }
 #contact-address {
   transition: all 0.15s ease-in-out;
+  color: var(--tim-header);
+  border-color: var(--tim-header);
   border-style: solid;
   border-width: 0.15rem;
   border-radius: 0 .4rem .4rem 0;
   border-left-width: 0.07rem;
-  &.purple {
-    color: var(--tim-text);
-    border-color: var(--tim-text);
-    &:hover {
-      color: white;
-      background-color: color(var(--tim-text) a(65%));
-    }
-  }
-  &.green {
-    color: var(--tim-green);
-    border-color: var(--tim-green);
-    &:hover {
-      color: white;
-      background-color: var(--tim-green);
-    }
-  }
-  &.red {
-    color: var(--tim-red);
-    border-color: var(--tim-red);
-    &:hover {
-      color: white;
-      background-color: var(--tim-red);
-    }
+  &:hover {
+    color: white;
+    background-color: color(var(--tim-header) a(65%));
   }
 }
 
@@ -191,12 +182,18 @@ a {
   font-weight: 600;
   text-decoration: none;
   color: var(--tim-link);
-  transition: all 0.10s ease-in-out;
 }
 a:active, a:focus, a:visited { color: var(--tim-link); }
 a:hover {
+  transition: all 0.10s ease-in-out;
   background-color: var(--tim-link-hover);
   color: white;
+}
+
+#content a {
+  border-radius: .2rem;
+  padding: 0 .2rem;
+  margin: 0 -.2rem;
 }
 
 .tim-text {
@@ -215,6 +212,32 @@ a:hover {
   border-bottom-style: dotted;
   border-bottom-width: .125rem;
   border-color: var(--tim-solid-line);
+}
+
+@keyframes slowpulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.73; }
+  100% { opacity: 1; }
+}
+
+.tim-available {
+  border-radius: .2rem;
+  color: white;
+  background-color: var(--tim-green);
+  animation-duration: 2s;
+  animation-name: slowpulse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.tim-not-available {
+  border-radius: .2rem;
+  color: white;
+  background-color: var(--tim-red);
+  animation-duration: 2s;
+  animation-name: slowpulse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .rating-bg {
@@ -239,14 +262,3 @@ a:hover {
   padding-top: var(--rating-padding);
   padding-bottom: var(--rating-padding);
 }
-
-.tech { color: white; }
-.tech.node { background-color: var(--tech-node); }
-.tech.npm { background-color: var(--tech-npm); }
-.tech.psql { background-color: var(--tech-psql); }
-.tech.electron { background-color: var(--tech-electron); }
-.tech.vue { background-color: var(--tech-vue); }
-.tech.sass { background-color: var(--tech-sass); }
-.tech.pug { background-color: var(--tech-pug); }
-.tech.edumate { background-color: var(--tech-edumate); }
-.tech.canvas { background-color: var(--tech-canvas); }
