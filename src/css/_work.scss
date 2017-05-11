@@ -1,0 +1,8 @@
+#work {
+  max-width: 50rem;
+  & hr {
+    height: 2px;
+    border: none;
+    background-color: $tim-solid-line;
+  }
+}

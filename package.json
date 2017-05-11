@@ -6,14 +6,13 @@
   "scripts": {
     "prebuild": "mkdir -p build/images/ build/css/ build/js/",
     "tachyons": "cp node_modules/tachyons/css/tachyons.min.css build/css/",
-    "postcss": "postcss -u postcss-cssnext -o build/css/index.css src/css/index.pcss",
-    "build-css": "yarn run tachyons && yarn run postcss",
+    "sass": "node-sass --output-style compressed --indent-type space --indent-width 2 src/css/index.scss > build/css/index.css",
+    "build-css": "yarn run tachyons && yarn run sass",
     "build-images": "cp -r src/images/* build/images/",
     "build-favicon": "cp src/favicon.png build/favicon.png",
     "build": "pug src/pug/ --out build/ && rm -rf build/includes build/images/**/* && yarn run build-css && yarn run build-images",
     "watch": "watch --interval 1 'yarn run build' src/",
     "browser-sync": "browser-sync start --server build --files '**/*.htm' '**/*.js' '**/index.css' '**/*.html' --reload-debounce 3 --reload-delay 250",
-    "predeploy": "yarn run build",
     "deploy": "./s3.sh"
   },
   "repository": {
@@ -35,11 +34,8 @@
   },
   "dependencies": {
     "node-sass": "^4.5.2",
-    "postcss-cli": "^2.6.0",
-    "postcss-cssnext": "^2.9.0",
     "pug": "^2.0.0-beta10",
     "pug-cli": "^1.0.0-alpha6",
-    "tachyons": "^4.6.2",
-    "tachyons-cli": "^1.0.10"
+    "tachyons": "^4.7.2"
   }
 }

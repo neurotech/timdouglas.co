@@ -1,0 +1,34 @@
+#front {
+  max-width: 50rem;
+  line-height: 1.3;
+}
+
+h1#hello {
+  animation-name: hello;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+#welcome p, #welcome a, #welcome footer {
+  animation-name: fade;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+#welcome footer {
+  color: opacify($tim-text, 0.3);
+  border-color: opacify($tim-text, 0.1);
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-width: .125rem;
+  & a {
+    color: opacify($tim-text, 0.45);
+    font-weight: 500;
+  }
+  & a:hover {
+    color: opacify($tim-text, 0.7);
+  }
+}

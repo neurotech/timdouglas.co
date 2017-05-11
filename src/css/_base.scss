@@ -1,0 +1,46 @@
+::selection {
+  background: $tim-header;
+  color: white;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: $tim-link;
+}
+a:active, a:focus, a:visited { color: $tim-link; }
+a:hover {
+  transition: all 0.10s ease-in-out;
+  background-color: $tim-link-hover;
+  color: white;
+}
+
+#content a {
+  border-radius: .2rem;
+  padding: 0 .2rem;
+  margin: 0 -.2rem;
+}
+
+#tim-douglas h1 { transition: all 0.15s ease-in-out; }
+
+#tim-douglas:hover h1 {
+  color: $tim-yellow;
+  transform: translateX(-0.3rem);
+}
+
+.tim-text { color: $tim-text; }
+.tim-hello { color: $tim-emphasis; }
+.tim-header { color: $tim-header; }
+.tim-emphasis { color: $tim-emphasis; }
+.tim-text-lite { color: $tim-subtitle; }
+.tim-solid-line {
+  border-bottom-style: solid;
+  border-bottom-width: .125rem;
+  border-color: $tim-solid-line;
+}
+
+.tim-dashed-line {
+  border-bottom-style: dotted;
+  border-bottom-width: .125rem;
+  border-color: $tim-solid-line;
+}
