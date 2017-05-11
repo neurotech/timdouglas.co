@@ -1,8 +1,10 @@
-- var title = ' - Contact'
+- var title = ' - Services'
+- var now = new Date().getFullYear();
+- var length = now - 2004;
 include ../includes/_header
 
   body.pa3.avenir.fw4.f4.tim-text
-    main#cv.center
+    main#services.center
       article.tim-solid-line.mb4.cf
         section.fl.w-100.w-50-ns
           a(href="/" id="tim-douglas").no-underline
@@ -10,7 +12,39 @@ include ../includes/_header
         section.fl.w-100.w-50-ns.tl.tr-ns
           h2.mv3.fw4 Services
 
-      article.mt4
-        section.w-100
-          p.mv2.f3.fw6.tim-emphasis Item
-          p Details
+      article.mt4#content
+        section.w-100.w-50-ns.fl.pr2.f4.f3-ns.lh-copy
+          p I have been working in education for the past #{length} years and specialise in building data-driven solutions for educational institutions.
+
+        section.w-100.w-50-ns.fl.pl4-ns.f4.f3-ns.tl.tr-ns.lh-copy
+          p I am currently #[span.tim-available.ph2 available] for work, so please #[a(href='/contact') get in touch] if you'd like to work with me.
+          //- p I am currently #[span.tim-not-available.ph2 not available] for work. Please #[a(href='/contact') get in touch] to work with me in the future.
+        
+        section.w-100.fl.f4.f3-ns.lh-copy
+          p.mt2.mb4 I can offer the following services:
+        
+        section.w-100.cf
+          div.w-100.w-50-ns.fl.f4.f3-ns.lh-copy
+            #gem.fl.mt2.mr2.pt2.pt1-ns.gem-red
+              include ../includes/_gem
+            p.mv2.f3.fw6.tim-emphasis Consultancy
+            p.mt2.mb4.f4.tim-text-lite Implementation &amp; administration of Edumate and Canvas
+
+          div.w-100.w-50-ns.pl5-ns.fl.f4.f3-ns.lh-copy
+            #gem.fl.mt2.mr2.pt2.pt1-ns.gem-blue
+              include ../includes/_gem
+            p.mv2.f3.fw6.tim-emphasis Reporting
+            p.mt2.mb4.f4.tim-text-lite SQL and OpenOffice Templates
+        
+        section.w-100.cf
+          div.w-100.w-50-ns.fl.f4.f3-ns.lh-copy
+            #gem.fl.mt2.mr2.pt2.pt1-ns.gem-yellow
+              include ../includes/_gem
+            p.mv2.f3.fw6.tim-emphasis Software Development
+            p.mt2.mb4.f4.tim-text-lite System integrations, web applications, server-side applications, internal dashboards
+
+          div.w-100.w-50-ns.pl5-ns.fl.f4.f3-ns.lh-copy
+            #gem.fl.mt2.mr2.pt2.pt1-ns.gem-green
+              include ../includes/_gem
+            p.mv2.f3.fw6.tim-emphasis Customisation
+            p.mt2.mb4.f4.tim-text-lite DB2 views and functions, front-end theming
