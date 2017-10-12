@@ -29,11 +29,11 @@
   ],
   "stylelint": "",
   "devDependencies": {
-    "semistandard": "10.0.0",
+    "semistandard": "11.0.0",
     "watch": "1.0.2"
   },
   "dependencies": {
-    "node-sass": "^4.5.2",
+    "node-sass": "4.5.3",
     "pug": "^2.0.0-beta10",
     "pug-cli": "^1.0.0-alpha6",
     "tachyons": "^4.7.2"
