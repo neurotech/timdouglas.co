@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { ThemeToggle } from "./ThemeToggle/ThemeToggle";
 
 type HeaderProps = {
 	heading?: string;
@@ -11,10 +12,11 @@ export const Header = ({
 	subheading,
 	linkHome = false,
 }: HeaderProps) => {
-	const headingContent = <h1>{heading}</h1>;
+	const headingContent = <h1 id="nolink">{heading}</h1>;
 	return (
 		<header>
 			{linkHome ? <Link href="/">{headingContent}</Link> : headingContent}
+			<ThemeToggle />
 			{subheading && <h2>{subheading}</h2>}
 		</header>
 	);

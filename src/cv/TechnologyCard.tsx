@@ -22,20 +22,18 @@ export const TechnologyCard = ({
 	progress,
 }: TechnologyCardProps) => {
 	return (
-		<>
-			<section id="technology">
-				<section id="technology-details">
-					<h4>{technology}</h4>
-					<div id="progress">
-						<div
-							id="bar"
-							className={getProgressSegment(progress)}
-							style={{ width: `${progress * 100}%` }}
-						/>
-					</div>
-				</section>
-				<h5>{example}</h5>
+		<section id="technology">
+			<section id="technology-details">
+				<h4>{technology}</h4>
+				<div id="progress">
+					<div
+						id="bar"
+						className={getProgressSegment(progress)}
+						style={{ width: `${progress * 100}%` }}
+					/>
+				</div>
 			</section>
-		</>
+			<h5>{example}</h5>
+		</section>
 	);
 };

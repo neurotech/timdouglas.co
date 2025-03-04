@@ -2,8 +2,8 @@ import type { IconProps } from "./IconProps";
 
 export const Sun = ({ className }: IconProps) => (
 	<svg
-		width="48"
-		height="48"
+		width="36"
+		height="36"
 		strokeWidth="1"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
