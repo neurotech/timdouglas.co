@@ -2,7 +2,6 @@ name: Upload to S3 (Preview)
 
 on:
   pull_request:
-  merge_group:
 
 jobs:
   deploy:
@@ -12,17 +11,17 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4
+    # - name: Setup pnpm
+    #   uses: pnpm/action-setup@v4
 
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
-        cache: pnpm
+        cache: npm
 
-    - run: pnpm install
+    - run: npm install
 
-    - run: pnpm run build
+    - run: npm run build
 
     - uses: jakejarvis/s3-sync-action@master
       with:
