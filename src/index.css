@@ -187,6 +187,7 @@ header {
 	font-size: calc(var(--font-size) * 1.5);
 	font-weight: 600;
 	user-select: none;
+	line-height: 1;
 
 	border-bottom: 2px solid
 		light-dark(var(--light-separator), var(--dark-separator));
@@ -201,7 +202,6 @@ header {
 		transform: translateX(0);
 
 		&:hover {
-			color: light-dark(var(--light-link-hover), var(--dark-link-hover-bg));
 			transform: translateX(-5px);
 		}
 	}
