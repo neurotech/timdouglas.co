@@ -3,10 +3,6 @@ main#cv {
 	flex-direction: column;
 	gap: calc(var(--spacing) * 2);
 
-	h3 {
-		user-select: none;
-	}
-
 	section#references {
 		font-style: italic;
 		font-size: calc(var(--font-size) * 0.75);
