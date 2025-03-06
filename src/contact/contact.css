@@ -48,8 +48,12 @@ main#contact {
 
 			&:hover {
 				background-color: var(--contact-card-value-bg-hover);
-
 				color: var(--contact-card-variant);
+			}
+
+			&:active {
+				background-color: var(--contact-card-value-bg-active);
+				color: var(--contact-card-value-active);
 			}
 
 			@media (max-width: 767px) {

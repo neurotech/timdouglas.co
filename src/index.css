@@ -37,8 +37,10 @@
 	--contact-card-variant-bg: var(--blue);
 	--contact-card-variant-border: var(--blue);
 	--contact-card-value: var(--blue);
+	--contact-card-value-active: var(--ash);
 	--contact-card-value-bg: var(--white);
 	--contact-card-value-bg-hover: var(--blue);
+	--contact-card-value-bg-active: var(--frost);
 
 	--progress-background: var(--separator);
 }
