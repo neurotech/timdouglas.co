@@ -1,5 +1,5 @@
+import "./header.css";
 import { Link } from "wouter";
-import { ThemeToggle } from "./ThemeToggle/ThemeToggle";
 
 type HeaderProps = {
 	heading?: string;
@@ -15,9 +15,11 @@ export const Header = ({
 	const headingContent = <h1 id="nolink">{heading}</h1>;
 	return (
 		<header>
-			{linkHome ? <Link href="/">{headingContent}</Link> : headingContent}
-			<ThemeToggle />
-			{subheading && <h2>{subheading}</h2>}
+			<section>
+				{linkHome ? <Link href="/">{headingContent}</Link> : headingContent}
+				{subheading && <h2>{subheading}</h2>}
+			</section>
+			<hr />
 		</header>
 	);
 };

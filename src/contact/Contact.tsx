@@ -1,4 +1,5 @@
-import { Header } from "../components/Header";
+import "./contact.css";
+import { Header } from "../components/Header/Header";
 import { ContactCard } from "./ContactCard";
 
 export const Contact = () => {

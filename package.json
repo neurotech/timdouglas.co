@@ -8,6 +8,7 @@
 		"build": "tsc && vite build",
 		"check": "biome check --write",
 		"dev": "vite",
+		"lint": "biome check",
 		"preview": "vite preview"
 	},
 	"repository": {

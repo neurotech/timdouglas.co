@@ -1,10 +1,10 @@
 import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Welcome } from "./welcome/Welcome";
 import { Route, Router } from "wouter";
-import { CV } from "./cv/CV";
 import { Contact } from "./contact/Contact";
+import { CV } from "./cv/CV";
+import { Welcome } from "./welcome/Welcome";
 
 const node = document.getElementById("app");
 

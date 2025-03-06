@@ -1,5 +1,3 @@
-import { Stack } from "../components/Stack";
-
 type EmploymentCardProps = {
 	title: string;
 	company: string;
@@ -12,10 +10,10 @@ export const EmploymentCard = ({
 	dates,
 }: EmploymentCardProps) => {
 	return (
-		<Stack spacing={0.33}>
+		<section id="card">
 			<h4>{title}</h4>
 			<h5>{company}</h5>
 			<h6>{dates}</h6>
-		</Stack>
+		</section>
 	);
 };

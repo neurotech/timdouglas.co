@@ -1,0 +1,163 @@
+main#cv {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--spacing) * 2);
+
+	h3 {
+		user-select: none;
+	}
+
+	section#references {
+		font-style: italic;
+		font-size: calc(var(--font-size) * 0.75);
+		color: var(--h6);
+		text-align: center;
+	}
+
+	h3 {
+		color: var(--h3);
+		font-size: var(--font-size);
+		font-weight: 700;
+		padding-bottom: calc(var(--spacing) * 0.25);
+		margin-bottom: var(--spacing);
+		border-bottom: 2px dotted var(--separator);
+	}
+
+	h4 {
+		color: var(--h4);
+		font-size: var(--font-size);
+		font-weight: 600;
+	}
+
+	h5 {
+		color: var(--h5);
+		font-size: calc(var(--font-size) * 0.85);
+		font-weight: 500;
+	}
+
+	h6 {
+		color: var(--h6);
+		font-size: calc(var(--font-size) * 0.75);
+		font-weight: 400;
+	}
+
+	@media (max-width: 767px) {
+		h3 {
+			font-size: var(--font-size);
+		}
+		h4 {
+			font-size: calc(var(--font-size) * 0.85);
+		}
+		h5 {
+			font-size: calc(var(--font-size) * 0.8);
+		}
+		h6 {
+			font-size: calc(var(--font-size) * 0.75);
+		}
+	}
+
+	section#employment {
+		display: flex;
+		flex-direction: column;
+
+		section#cards {
+			display: flex;
+			justify-content: space-between;
+			gap: calc(var(--spacing) * 3);
+
+			@media (max-width: 767px) {
+				flex-direction: column;
+				gap: var(--spacing);
+			}
+
+			section#card {
+				display: flex;
+				flex-direction: column;
+				gap: calc(var(--spacing) * 0.33);
+				flex: 1;
+			}
+		}
+	}
+
+	section#technologies {
+		section#cards {
+			display: flex;
+			flex-direction: column;
+			gap: calc(var(--spacing) * 2);
+
+			@media (max-width: 767px) {
+				gap: var(--spacing);
+			}
+
+			section#row {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				flex: 1;
+				gap: calc(var(--spacing) * 3);
+
+				@media (max-width: 767px) {
+					flex-direction: column;
+					gap: var(--spacing);
+				}
+			}
+		}
+
+		section#technology {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+
+			@media (max-width: 767px) {
+				width: 100%;
+			}
+		}
+
+		section#technology-details {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	section#skills-and-achievements {
+		ul {
+			font-size: calc(var(--font-size) * 0.8);
+			margin: var(--spacing) 0 calc(var(--spacing) * 1.5) 0;
+		}
+
+		li {
+			margin: 0.25rem 0;
+			font-weight: 500;
+		}
+
+		li::marker {
+			color: var(--h6);
+		}
+	}
+
+	#progress {
+		border-radius: 2px;
+		height: 1.2rem;
+		background-color: var(--progress-background);
+		width: 100px;
+		border: 2px solid var(--progress-background);
+		box-shadow: 0 0 0 1px rgba(1, 1, 1, 0.15);
+
+		#bar {
+			border-radius: 1px;
+			height: 100%;
+
+			&.low {
+				background-color: var(--red);
+			}
+			&.medium {
+				background-color: var(--yellow);
+			}
+			&.high {
+				background-color: var(--green);
+			}
+		}
+	}
+}

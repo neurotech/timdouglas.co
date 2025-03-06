@@ -1,0 +1,20 @@
+#welcome {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing);
+
+	a {
+		color: var(--link);
+		transition: all var(--transition-time) ease-in-out;
+		padding: 0 0.2rem;
+		margin: 0 -0.2rem;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 700;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+		}
+	}
+}

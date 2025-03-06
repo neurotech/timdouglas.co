@@ -1,6 +1,7 @@
-import { Header } from "../components/Header";
-import { EmploymentCard } from "./EmploymentCard";
-import { TechnologyCard } from "./TechnologyCard";
+import "./cv.css";
+import { Header } from "../components/Header/Header";
+import { EmploymentCard } from "./components/EmploymentCard";
+import { TechnologyCard } from "./components/TechnologyCard";
 
 export const CV = () => {
 	return (
@@ -29,12 +30,12 @@ export const CV = () => {
 						<section id="row">
 							<TechnologyCard
 								technology="Frontend"
-								example="HTML, CSS, React"
+								example="React, MobX, HTML, CSS"
 								progress={0.9}
 							/>
 							<TechnologyCard
 								technology="Backend"
-								example="C#"
+								example="C#, node.js"
 								progress={0.5}
 							/>
 						</section>
@@ -58,9 +59,19 @@ export const CV = () => {
 				<section id="skills-and-achievements">
 					<h3>{"Skills and Achievements"}</h3>
 					<section id="skills">
-						<h4>{"Phocas Software"}</h4>
+						<h4>{"Phocas Software (Draft)"}</h4>
 						<ul>
-							<li>TODO</li>
+							<li>
+								Core (Monolith, covering SQL, Sync client, MVC, legacy jQuery,
+								implementing React)
+							</li>
+							<li>FS (v1, fs-app)</li>
+							<li>
+								Analytics (greenfield product using MobX, React, zod, ...)
+							</li>
+							<li>
+								Misc (shared-components, secondment to Professional Services)
+							</li>
 						</ul>
 
 						<h4>{"Rosebank College"}</h4>
@@ -69,32 +80,20 @@ export const CV = () => {
 								Implemented, managed, and maintained Edumate from 2012 to 2017.
 							</li>
 							<li>
-								Produced over 150 custom reports for Edumate, written in SQL.
-							</li>
-							<li>
-								Created and maintained a Node.js application which integrated
-								with Edumate; along with a live reporting dashboard (Vue.js)
-							</li>
-							<li>
-								Created a cross-platform desktop application to aid with
-								everyday diagnostics (Electron & Vue.js)
+								Successfully implemented Canvas as a replacement for Moodle in
+								2015.
 							</li>
 							<li>
 								Provided Edumate training to teaching and support staff in the
 								form of presentations, handouts, and screencasts.
 							</li>
 							<li>
-								Successfully implemented Canvas as a replacement for Moodle in
-								2015.
+								Produced over 150 custom reports for Edumate, written in SQL.
 							</li>
 							<li>
 								Built a Node.js application that automatically synchronises and
 								transforms data between Canvas and Edumate. (Docker, NGINX,
 								PostgreSQL)
-							</li>
-							<li>
-								Customised several elements of Canvas' UI using jQuery/JS and
-								CSS.
 							</li>
 						</ul>
 					</section>
