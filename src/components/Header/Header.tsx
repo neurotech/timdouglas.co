@@ -12,7 +12,7 @@ export const Header = ({
 	subheading,
 	linkHome = false,
 }: HeaderProps) => {
-	const headingContent = <h1 id="nolink">{heading}</h1>;
+	const headingContent = <h1 id={!linkHome ? "nolink" : ""}>{heading}</h1>;
 	return (
 		<header>
 			<section>

@@ -8,12 +8,13 @@
 		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
 	/* Timings */
-	--transition-time: 0.2s;
+	--transition-time: 0.15s;
 
 	/* Palette */
 	--white: rgb(248, 248, 255);
 	--blue: rgb(80, 119, 243);
 	--navy: rgb(0, 19, 80);
+	--lightnavy: rgb(6, 38, 143);
 	--ash: rgb(68, 77, 124);
 	--frost: rgb(217, 224, 240);
 	--bluebell: rgb(132, 139, 173);
@@ -70,7 +71,7 @@ body {
 	font-feature-settings: normal;
 	font-variation-settings: normal;
 	font-size: var(--font-size);
-	line-height: 1.3;
+	line-height: 1.35;
 
 	padding: 2rem;
 	margin: 0;
