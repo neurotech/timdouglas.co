@@ -20,6 +20,7 @@
 	--darkash: rgb(43, 54, 102);
 	--frost: rgb(217, 224, 240);
 	--bluebell: rgb(101, 110, 153);
+	--waikawa: rgb(86, 98, 149);
 	--red: rgb(231, 76, 60);
 	--yellow: rgb(255, 166, 0);
 	--green: rgb(120, 174, 61);
@@ -142,4 +143,9 @@ main {
 .definition {
 	border-bottom: 1px dotted black;
 	cursor: help;
+}
+
+span#interpunct {
+	font-weight: normal;
+	color: var(--bluebell);
 }

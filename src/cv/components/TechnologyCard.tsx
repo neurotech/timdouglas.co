@@ -1,6 +1,6 @@
 export type TechnologyCardProps = {
 	technology: string;
-	example: string;
+	details: string[];
 	progress: number;
 };
 
@@ -29,7 +29,10 @@ export const TechnologyCard = ({ technology, details, progress }: TechnologyCard
 					/>
 				</div>
 			</section>
-			<h5>{example}</h5>
+			<hr />
+			<h5 id="subdued">
+				{details.map((detail, index) => `${detail}${index + 1 < details.length ? ", " : ""}`)}
+			</h5>
 		</section>
 	);
 };

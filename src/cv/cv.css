@@ -39,6 +39,12 @@ main#cv {
 		margin-top: var(--spacing);
 	}
 
+	h5#subdued {
+		font-weight: 400;
+		font-size: 15px;
+		color: var(--waikawa);
+	}
+
 	h6 {
 		color: var(--h6);
 		font-size: calc(var(--font-size) * 0.65);
@@ -48,10 +54,6 @@ main#cv {
 	section#employment {
 		display: flex;
 		flex-direction: column;
-
-		span#pipe {
-			color: var(--ash);
-		}
 
 		section#cards {
 			display: flex;
@@ -149,6 +151,8 @@ main#cv {
 			display: flex;
 			flex-direction: column;
 			flex: 1;
+			gap: calc(var(--spacing) * 0.5);
+			max-width: 50%;
 
 			background: var(--brightwhite);
 			padding: var(--spacing);
@@ -157,6 +161,16 @@ main#cv {
 
 			@media (max-width: 767px) {
 				width: 100%;
+			}
+
+			hr {
+				width: 100%;
+				margin: 0;
+				height: 1px;
+				border-top: 1px dotted rgb(116, 132, 170);
+				border-left: none;
+				border-right: none;
+				border-bottom: none;
 			}
 		}
 
@@ -190,5 +204,13 @@ main#cv {
 				background-color: var(--green);
 			}
 		}
+	}
+
+	#chips {
+		display: flex;
+		flex-direction: row;
+		gap: var(--spacing);
+		padding: 0 4px;
+		flex-wrap: wrap;
 	}
 }
