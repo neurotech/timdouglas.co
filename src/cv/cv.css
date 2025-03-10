@@ -10,6 +10,10 @@ main#cv {
 		text-align: center;
 	}
 
+	strong {
+		font-weight: 600;
+	}
+
 	h3 {
 		color: var(--h3);
 		font-size: var(--font-size);
@@ -21,45 +25,39 @@ main#cv {
 
 	h4 {
 		color: var(--h4);
-		font-size: var(--font-size);
+		font-size: calc(var(--font-size) * 0.85);
 		font-weight: 600;
 	}
 
 	h5 {
-		color: var(--h5);
-		font-size: calc(var(--font-size) * 0.85);
-		font-weight: 500;
+		color: var(--darkash);
+		font-size: calc(var(--font-size) * 0.75);
+		font-weight: 600;
+	}
+
+	h5#subheading {
+		margin-top: var(--spacing);
 	}
 
 	h6 {
 		color: var(--h6);
-		font-size: calc(var(--font-size) * 0.75);
+		font-size: calc(var(--font-size) * 0.65);
 		font-weight: 400;
-	}
-
-	@media (max-width: 767px) {
-		h3 {
-			font-size: var(--font-size);
-		}
-		h4 {
-			font-size: calc(var(--font-size) * 0.85);
-		}
-		h5 {
-			font-size: calc(var(--font-size) * 0.8);
-		}
-		h6 {
-			font-size: calc(var(--font-size) * 0.75);
-		}
 	}
 
 	section#employment {
 		display: flex;
 		flex-direction: column;
 
+		span#pipe {
+			color: var(--ash);
+		}
+
 		section#cards {
 			display: flex;
+			flex-direction: column;
 			justify-content: space-between;
-			gap: calc(var(--spacing) * 3);
+			gap: var(--spacing);
 
 			@media (max-width: 767px) {
 				flex-direction: column;
@@ -71,7 +69,55 @@ main#cv {
 				flex-direction: column;
 				gap: calc(var(--spacing) * 0.33);
 				flex: 1;
+
+				background: var(--brightwhite);
+				padding: var(--spacing);
+				border: 1px solid var(--separator);
+				border-radius: 4px;
+
+				@media (max-width: 767px) {
+					gap: calc(var(--spacing) * 0.5);
+				}
+
+				hr {
+					margin: 0;
+					border: none;
+					background-color: var(--separator);
+					width: 100%;
+					height: 1px;
+				}
+
+				section#row {
+					display: flex;
+					justify-content: space-between;
+
+					@media (max-width: 767px) {
+						flex-direction: column;
+						align-items: flex-start;
+					}
+				}
 			}
+		}
+
+		p {
+			font-size: calc(var(--font-size) * 0.65);
+			margin: 0 0 calc(var(--spacing) * 0.5) 0;
+		}
+
+		ul {
+			font-size: calc(var(--font-size) * 0.65);
+			padding-left: calc(var(--font-size) * 0.65);
+			margin: 0;
+		}
+
+		li {
+			margin: 0.25rem 0;
+			font-weight: 500;
+			line-height: 1.5;
+		}
+
+		li::marker {
+			color: var(--ash);
 		}
 	}
 
@@ -79,7 +125,7 @@ main#cv {
 		section#cards {
 			display: flex;
 			flex-direction: column;
-			gap: calc(var(--spacing) * 2);
+			gap: var(--spacing);
 
 			@media (max-width: 767px) {
 				gap: var(--spacing);
@@ -90,7 +136,7 @@ main#cv {
 				flex-direction: row;
 				justify-content: space-between;
 				flex: 1;
-				gap: calc(var(--spacing) * 3);
+				gap: var(--spacing);
 
 				@media (max-width: 767px) {
 					flex-direction: column;
@@ -103,6 +149,11 @@ main#cv {
 			display: flex;
 			flex-direction: column;
 			flex: 1;
+
+			background: var(--brightwhite);
+			padding: var(--spacing);
+			border: 1px solid var(--separator);
+			border-radius: 4px;
 
 			@media (max-width: 767px) {
 				width: 100%;
@@ -117,25 +168,9 @@ main#cv {
 		}
 	}
 
-	section#skills-and-achievements {
-		ul {
-			font-size: calc(var(--font-size) * 0.8);
-			margin: var(--spacing) 0 calc(var(--spacing) * 1.5) 0;
-		}
-
-		li {
-			margin: 0.25rem 0;
-			font-weight: 500;
-		}
-
-		li::marker {
-			color: var(--h6);
-		}
-	}
-
 	#progress {
 		border-radius: 2px;
-		height: 1.2rem;
+		height: 1.1rem;
 		background-color: var(--progress-background);
 		width: 100px;
 		border: 2px solid var(--progress-background);

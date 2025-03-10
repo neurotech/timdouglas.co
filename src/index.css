@@ -12,12 +12,14 @@
 
 	/* Palette */
 	--white: rgb(248, 248, 255);
+	--brightwhite: rgb(255, 255, 255);
 	--blue: rgb(80, 119, 243);
 	--navy: rgb(0, 19, 80);
 	--lightnavy: rgb(6, 38, 143);
 	--ash: rgb(68, 77, 124);
+	--darkash: rgb(43, 54, 102);
 	--frost: rgb(217, 224, 240);
-	--bluebell: rgb(132, 139, 173);
+	--bluebell: rgb(101, 110, 153);
 	--red: rgb(231, 76, 60);
 	--yellow: rgb(255, 166, 0);
 	--green: rgb(120, 174, 61);
@@ -135,4 +137,9 @@ main {
 	@media (max-width: 767px) {
 		width: 100%;
 	}
+}
+
+.definition {
+	border-bottom: 1px dotted black;
+	cursor: help;
 }
