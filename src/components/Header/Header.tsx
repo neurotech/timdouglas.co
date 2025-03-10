@@ -7,11 +7,7 @@ type HeaderProps = {
 	linkHome?: boolean;
 };
 
-export const Header = ({
-	heading = "Hello!",
-	subheading,
-	linkHome = false,
-}: HeaderProps) => {
+export const Header = ({ heading = "Hello!", subheading, linkHome = false }: HeaderProps) => {
 	const headingContent = <h1 id={!linkHome ? "nolink" : ""}>{heading}</h1>;
 	return (
 		<header>

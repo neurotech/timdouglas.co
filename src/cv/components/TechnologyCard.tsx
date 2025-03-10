@@ -16,11 +16,7 @@ const getProgressSegment = (progress: number) => {
 	return "high";
 };
 
-export const TechnologyCard = ({
-	technology,
-	example,
-	progress,
-}: TechnologyCardProps) => {
+export const TechnologyCard = ({ technology, details, progress }: TechnologyCardProps) => {
 	return (
 		<section id="technology">
 			<section id="technology-details">

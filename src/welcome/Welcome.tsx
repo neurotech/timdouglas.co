@@ -7,9 +7,7 @@ export const Welcome = () => {
 		<>
 			<Header />
 			<main id="welcome">
-				<section>
-					I'm Tim, a full stack developer based in Orange, Australia.
-				</section>
+				<section>I'm Tim, a full stack developer based in Orange, Australia.</section>
 				<section>Blurb here</section>
 				<section>
 					Please take a look at <Link href="/cv">my CV</Link>, or{" "}

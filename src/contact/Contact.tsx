@@ -7,11 +7,7 @@ export const Contact = () => {
 		<>
 			<Header heading="Tim Douglas" subheading="Say hello." linkHome />
 			<main id="contact">
-				<ContactCard
-					variant="Email"
-					value="hello@timdouglas.co"
-					url="mailto:hello@timdouglas.co"
-				/>
+				<ContactCard variant="Email" value="hello@timdouglas.co" url="mailto:hello@timdouglas.co" />
 				<ContactCard
 					variant="GitHub"
 					value="github.com/neurotech"
