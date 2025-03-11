@@ -1,28 +1,28 @@
 {
-	"name": "timdouglas.co",
-	"private": true,
-	"version": "1.0.0",
-	"author": "Tim Douglas",
-	"description": "Source for http://timdouglas.co",
-	"scripts": {
-		"build": "tsc && vite build",
-		"check": "biome check --write",
-		"dev": "vite",
-		"lint": "biome check",
-		"preview": "vite preview"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://www.github.com/neurotech/timdouglas.co"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@types/node": "^22.13.8",
-		"typescript": "~5.7.2",
-		"vite": "^6.2.0"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": ["@biomejs/biome"]
-	},
-	"packageManager": "pnpm@10.5.0"
+  "name": "timdouglas.co",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Tim Douglas",
+  "description": "Source for http://timdouglas.co",
+  "scripts": {
+    "build": "tsc && vite build",
+    "check": "biome check --write",
+    "dev": "vite",
+    "lint": "biome check",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/neurotech/timdouglas.co"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.8",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome"]
+  },
+  "packageManager": "pnpm@10.5.0"
 }
