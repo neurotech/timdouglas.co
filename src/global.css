@@ -92,7 +92,7 @@ body {
   flex-direction: column;
   flex: 1;
   align-content: center;
-  width: 45rem;
+  width: 50rem;
   margin: 0 auto;
 
   @media (max-width: 767px) {
