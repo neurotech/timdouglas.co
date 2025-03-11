@@ -51,6 +51,18 @@ main#cv {
 		font-weight: 400;
 	}
 
+	@media (max-width: 767px) {
+		h3 {
+			font-size: calc(var(--font-size) * 0.85);
+		}
+		h4 {
+			font-size: calc(var(--font-size) * 0.75);
+		}
+		h5 {
+			font-size: calc(var(--font-size) * 0.7);
+		}
+	}
+
 	section#employment {
 		display: flex;
 		flex-direction: column;
@@ -124,6 +136,9 @@ main#cv {
 	}
 
 	section#technologies {
+		display: flex;
+		flex-direction: column;
+
 		section#cards {
 			display: flex;
 			flex-direction: column;
@@ -161,6 +176,7 @@ main#cv {
 
 			@media (max-width: 767px) {
 				width: 100%;
+				max-width: 100%;
 			}
 
 			hr {
