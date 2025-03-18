@@ -1,41 +1,28 @@
 {
   "name": "timdouglas.co",
+  "private": true,
   "version": "1.0.0",
+  "author": "Tim Douglas",
   "description": "Source for http://timdouglas.co",
-  "main": "index.js",
   "scripts": {
-    "prebuild": "mkdir -p build/images/ build/css/ build/js/",
-    "tachyons": "cp node_modules/tachyons/css/tachyons.min.css build/css/",
-    "sass": "node-sass --output-style compressed --indent-type space --indent-width 2 src/css/index.scss > build/css/index.css",
-    "build-css": "yarn run tachyons && yarn run sass",
-    "build-images": "cp -r src/images/* build/images/",
-    "build-favicon": "cp src/favicon.png build/favicon.png",
-    "build": "pug src/pug/ --out build/ && rm -rf build/includes build/images/**/* && yarn run build-css && yarn run build-images",
-    "watch": "watch --interval 1 'yarn run build' src/",
-    "browser-sync": "browser-sync start --server build --files '**/*.htm' '**/*.js' '**/index.css' '**/*.html' --reload-debounce 3 --reload-delay 250",
-    "deploy": "./s3.sh"
+    "build": "tsc && vite build",
+    "check": "biome check --write",
+    "dev": "vite",
+    "lint": "biome check",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "https://www.github.com/neurotech/timdouglas.co"
   },
-  "private": true,
-  "author": "Tim Douglas",
-  "license": "ISC",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "ie >= 9"
-  ],
-  "stylelint": "",
   "devDependencies": {
-    "semistandard": "11.0.0",
-    "watch": "1.0.2"
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.8",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
   },
-  "dependencies": {
-    "node-sass": "4.5.3",
-    "pug": "^2.0.0-beta10",
-    "pug-cli": "^1.0.0-alpha6",
-    "tachyons": "^4.7.2"
-  }
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome"]
+  },
+  "packageManager": "pnpm@10.5.0"
 }

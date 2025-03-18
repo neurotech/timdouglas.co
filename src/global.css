@@ -1,0 +1,240 @@
+:root {
+  /* Layout */
+  --spacing: 1rem;
+
+  /* Typography */
+  --font-size: 1.5rem;
+  --font-body-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Timings */
+  --transition-time: 0.15s;
+
+  /* Palette */
+  --white: rgb(248, 248, 255);
+  --brightwhite: rgb(255, 255, 255);
+  --blue: rgb(80, 119, 243);
+  --navy: rgb(0, 19, 80);
+  --lightnavy: rgb(6, 38, 143);
+  --ash: rgb(68, 77, 124);
+  --darkash: rgb(43, 54, 102);
+  --frost: rgb(217, 224, 240);
+  --bluebell: rgb(101, 110, 153);
+  --waikawa: rgb(86, 98, 149);
+  --red: rgb(231, 76, 60);
+  --yellow: rgb(255, 166, 0);
+  --green: rgb(120, 174, 61);
+
+  --bg: var(--white);
+  --color: var(--ash);
+  --select: var(--white);
+  --select-bg: var(--blue);
+  --subheading: var(--ash);
+  --link: var(--blue);
+  --separator: var(--frost);
+  --h3: var(--blue);
+  --h4: var(--navy);
+  --h5: var(--ash);
+  --h6: var(--bluebell);
+
+  --contact-card-variant: var(--white);
+  --contact-card-variant-bg: var(--blue);
+  --contact-card-variant-border: var(--blue);
+  --contact-card-value: var(--blue);
+  --contact-card-value-active: var(--ash);
+  --contact-card-value-bg: var(--white);
+  --contact-card-value-bg-hover: var(--blue);
+  --contact-card-value-bg-active: var(--frost);
+
+  --progress-background: var(--separator);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: var(--select);
+  background: var(--select-bg);
+}
+
+html {
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body-family);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-size: var(--font-size);
+  line-height: 1.35;
+
+  padding: 2rem;
+  margin: 0;
+
+  @media (max-width: 767px) {
+    padding: 0.75rem;
+  }
+
+  background-color: var(--bg);
+  color: var(--color);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-content: center;
+  width: 50rem;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+span#interpunct {
+  font-weight: normal;
+  color: var(--bluebell);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacing);
+  margin-bottom: var(--spacing);
+  gap: var(--spacing);
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(var(--font-size) * 1.5);
+    font-weight: 600;
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    height: 2px;
+    margin: 0;
+    background-color: var(--separator);
+  }
+
+  a#homelink {
+    color: var(--link);
+    transition: transform var(--transition-time) ease-in-out;
+    padding: 0.2rem;
+    margin: -0.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transform: translateX(0);
+
+    &:hover {
+      transform: translateX(-5px);
+    }
+  }
+
+  h1 {
+    font-size: calc(var(--font-size) * 1.5);
+  }
+
+  h1#nolink {
+    color: var(--blue);
+  }
+
+  h2 {
+    font-size: calc(var(--font-size) * 1.2);
+    font-weight: 400;
+    color: var(--subheading);
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 0.33);
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: left;
+
+      span#interpunct {
+        display: none;
+      }
+    }
+
+    a {
+      font-size: calc(var(--font-size) * 0.85);
+      color: var(--bluebell);
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+
+      &:hover {
+        color: var(--blue);
+      }
+
+      @media (max-width: 767px) {
+        font-size: calc(var(--font-size) * 0.6);
+      }
+    }
+
+    span#interpunct {
+      color: var(--frost);
+      font-size: calc(var(--font-size) * 0.95);
+      user-select: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 0;
+    margin-bottom: calc(var(--spacing) * 0.75);
+    gap: calc(var(--spacing) * 0.5);
+
+    h1 {
+      font-size: var(--font-size);
+    }
+    h2 {
+      font-size: calc(var(--font-size) * 0.7);
+    }
+  }
+}
