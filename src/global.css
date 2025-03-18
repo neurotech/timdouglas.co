@@ -207,6 +207,7 @@ header {
       color: var(--bluebell);
       font-weight: 400;
       text-decoration: underline;
+      text-decoration-thickness: 1px;
 
       &:hover {
         color: var(--blue);
