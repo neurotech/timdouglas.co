@@ -146,6 +146,40 @@ main#cv {
     }
   }
 
+  section#qualifications {
+    display: flex;
+    flex-direction: column;
+
+    section#cards {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing);
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        gap: var(--spacing);
+      }
+
+      section#card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: calc(var(--spacing) * 0.5);
+        max-width: 50%;
+
+        background: var(--brightwhite);
+        padding: var(--spacing);
+        border: 1px solid var(--separator);
+        border-radius: 4px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
   section#technologies {
     display: flex;
     flex-direction: column;
