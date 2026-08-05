@@ -20,9 +20,5 @@
     "@types/node": "^22.13.8",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome"]
-  },
-  "packageManager": "pnpm@10.5.0"
+  }
 }
