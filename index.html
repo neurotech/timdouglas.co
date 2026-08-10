@@ -11,6 +11,13 @@
   <meta name="description" content="A full stack developer based in Orange, Australia.">
   <meta property="og:image" content="/unfurl.png" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <link rel="stylesheet" href="/src/style.css">
 
   <script>
@@ -24,8 +31,9 @@
 
 <body>
   <div id="app">
+    <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
     <header>
-      <section>
+      <section id="heading">
         <h1 id="nolink">Hello!</h1>
       </section>
       <hr />
@@ -40,6 +48,7 @@
       </p>
     </main>
   </div>
+  <script type="module" src="/src/theme.js"></script>
 </body>
 
 </html>

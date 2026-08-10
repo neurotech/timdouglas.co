@@ -11,6 +11,13 @@
   <meta name="description" content="Curriculum Vitae for Tim Douglas">
   <meta property="og:image" content="/unfurl.png" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <link rel="stylesheet" href="/src/style.css">
 
   <script>
@@ -24,6 +31,7 @@
 
 <body>
   <div id="app">
+    <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
     <header>
       <section id="heading">
         <a href="/" id="homelink">
@@ -281,6 +289,7 @@
       <section id="references">References are available on request.</section>
     </main>
   </div>
+  <script type="module" src="/src/theme.js"></script>
 </body>
 
 </html>

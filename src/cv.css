@@ -30,7 +30,7 @@ main#cv {
   }
 
   h5 {
-    color: var(--darkash);
+    color: var(--h5);
     font-size: calc(var(--font-size) * 0.75);
     font-weight: 600;
   }
@@ -42,7 +42,7 @@ main#cv {
   h5.subdued {
     font-weight: 400;
     font-size: calc(var(--font-size) * 0.6);
-    color: var(--waikawa);
+    color: var(--subdued);
   }
 
   h6 {
@@ -67,7 +67,7 @@ main#cv {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background: var(--brightwhite);
+    background: var(--card-bg);
     padding: var(--spacing);
     border: 1px solid var(--separator);
     border-radius: 4px;
@@ -139,7 +139,7 @@ main#cv {
     }
 
     li::marker {
-      color: var(--ash);
+      color: var(--marker);
     }
   }
 
