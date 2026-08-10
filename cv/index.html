@@ -5,13 +5,13 @@
   <title>Tim Douglas - Curriculum Vitae</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:url" content="https://timdouglas.co" />
+  <meta property="og:url" content="https://timdouglas.co/cv/" />
   <meta property="og:title" content="Tim Douglas" />
   <meta property="og:description" content="Curriculum Vitae" />
   <meta name="description" content="Curriculum Vitae for Tim Douglas">
   <meta property="og:image" content="/unfurl.png" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-  <link rel="preload stylesheet" href="/src/style.css" as="style">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="/src/style.css">
 
   <script>
     !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
@@ -32,10 +32,10 @@
         <h2>Curriculum Vitae</h2>
       </section>
       <section id="contact">
-        <a href="mailto:hello@timdouglas.co" target="_blank" rel="noreferrer">hello@timdouglas.co</a>
-        <span id="interpunct">&#x7c;</span>
+        <a href="mailto:hello@timdouglas.co">hello@timdouglas.co</a>
+        <span class="interpunct" aria-hidden="true">&#x7c;</span>
         <a href="https://github.com/neurotech" target="_blank" rel="noreferrer">github.com/neurotech</a>
-        <span id="interpunct">&#x7c;</span>
+        <span class="interpunct" aria-hidden="true">&#x7c;</span>
         <a href="https://www.linkedin.com/in/neurotech" target="_blank" rel="noreferrer">linkedin.com/in/neurotech</a>
       </section>
       <hr />
@@ -45,16 +45,16 @@
       <section id="employment">
         <h3>Employment</h3>
 
-        <section id="cards">
-          <section id="card">
-            <section id="row">
+        <section class="cards">
+          <section class="card">
+            <section class="row">
               <h4>House of Doge</h4>
               <h4>Jun. 2025 to present</h4>
             </section>
 
-            <section id="row">
+            <section class="row">
               <h5>Senior Engineer</h5>
-              <h5 id="subdued">Remote</h5>
+              <h5 class="subdued">Remote</h5>
             </section>
 
             <section>
@@ -63,7 +63,7 @@
             <section>
               <ul>
                 <li>
-                    Collaborated with several engineers and designers at the ground floor to create a mobile application. This project provided customers with a full end-to-end cryptocurrency experience. It provided support for cryptocurrency transfers, wallet creation, &amp; vendor tools such as invoicing and one-off payments.
+                    Collaborated with multiple engineers and designers to create a mobile application from the ground up. This project provided customers with a full end-to-end cryptocurrency experience. It provided support for cryptocurrency transfers, wallet creation, &amp; vendor tools such as invoicing and one-off payments.
                     <br />
                     <strong>Stack:</strong> TypeScript (React Native, Expo, TanStack Query, Uniwind); Go; GitHub Actions
                 </li>
@@ -72,21 +72,24 @@
                     <br />
                     <strong>Stack:</strong> TypeScript (Next.JS, React, Tailwind); Prisma
                 </li>
+                <li>
+                    Leveraged the use of multiple AI &amp; agentic tools in my day-to-day work. This enabled me to solve problems and ship features faster, as well as increase test coverage and improve my approach to professional development.
+                </li>
               </ul>
             </section>
           </section>
 
-          <section id="card">
-            <section id="row">
+          <section class="card">
+            <section class="row">
               <h4>Phocas Software</h4>
               <h4>Oct. 2017 to Mar. 2025</h4>
             </section>
 
-            <section id="row">
+            <section class="row">
               <h5>
-                Senior Software Engineer <span id="interpunct">&#8226;</span> Aug. 2022 to Mar. 2025
+                Senior Software Engineer <span class="interpunct" aria-hidden="true">&#8226;</span> Aug. 2022 to Mar. 2025
               </h5>
-              <h5 id="subdued">Orange, NSW & Remote</h5>
+              <h5 class="subdued">Orange, NSW &amp; Remote</h5>
             </section>
 
             <section>
@@ -100,7 +103,6 @@
                   <br />
                   <strong>Stack:</strong> TypeScript (React, Redux, MobX, zod); C# (Web API); SQL (PostgreSQL); AWS
                   Lambda; GraphQL; Docker; Octopus; GitHub Actions; Jenkins
-                </li>
                 </li>
                 <li>
                   Collaborated within a cross-functional team to build an internal UI components library aligned with
@@ -124,9 +126,9 @@
               </ul>
             </section>
 
-            <section id="row">
-              <h5 id="subheading">
-                Software Developer <span id="interpunct">&#8226;</span> Oct. 2017 to Aug. 2022
+            <section class="row">
+              <h5 class="subheading">
+                Software Developer <span class="interpunct" aria-hidden="true">&#8226;</span> Oct. 2017 to Aug. 2022
               </h5>
             </section>
 
@@ -153,15 +155,15 @@
             </section>
           </section>
 
-          <section id="card">
-            <section id="row">
+          <section class="card">
+            <section class="row">
               <h4>Rosebank College</h4>
               <h4>Sept. 2008 to Apr. 2017</h4>
             </section>
 
-            <section id="row">
+            <section class="row">
               <h5>e-Learning Manager</h5>
-              <h5 id="subdued">Five Dock, NSW</h5>
+              <h5 class="subdued">Five Dock, NSW</h5>
             </section>
 
             <section>
@@ -192,15 +194,15 @@
             </section>
           </section>
 
-          <section id="card">
-            <section id="row">
+          <section class="card">
+            <section class="row">
               <h4>Stella Maris College</h4>
               <h4>Apr. 2004 to Sept. 2008</h4>
             </section>
 
-            <section id="row">
+            <section class="row">
               <h5>Content Developer</h5>
-              <h5 id="subdued">Manly, NSW</h5>
+              <h5 class="subdued">Manly, NSW</h5>
             </section>
           </section>
         </section>
@@ -208,69 +210,69 @@
 
       <section id="qualifications">
         <h3>Qualifications</h3>
-        <section id="cards">
-          <section id="card">
+        <section class="cards">
+          <section class="card">
             <h4>Diploma of e-Learning</h4>
             <h5>Stella Maris Institute</h5>
-            <h5 id="subdued">2005 to 2006</h5>
+            <h5 class="subdued">2005 to 2006</h5>
           </section>
 
-          <section id="card">
+          <section class="card">
             <h4>Diploma of Multimedia</h4>
             <h5>Stella Maris Institute</h5>
-            <h5 id="subdued">2004 to 2005</h5>
+            <h5 class="subdued">2004 to 2005</h5>
           </section>
         </section>
       </section>
 
       <section id="technologies">
-        <h3>Technologies & Skills</h3>
-        <section id="cards">
-          <section id="row">
-            <section id="technology">
-              <section id="technology-details">
+        <h3>Technologies &amp; Skills</h3>
+        <section class="cards">
+          <section class="row">
+            <section class="technology">
+              <section class="technology-details">
                 <h4>Frontend</h4>
-                <div id="progress">
-                  <div id="bar" class="high" style="width: 90%" />
+                <div class="progress" role="progressbar" aria-label="Frontend proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="bar high" style="width: 90%"></div>
                 </div>
               </section>
               <hr />
-              <h5 id="subdued">TypeScript, React, React Native, Expo, Uniwind, Redux, MobX, zod, HTML, CSS</h5>
+              <h5 class="subdued">TypeScript, React, React Native, Expo, Uniwind, Redux, MobX, zod, HTML, CSS</h5>
             </section>
 
-            <section id="technology">
-              <section id="technology-details">
+            <section class="technology">
+              <section class="technology-details">
                 <h4>Communication</h4>
-                <div id="progress">
-                  <div id="bar" class="high" style="width: 80%" />
+                <div class="progress" role="progressbar" aria-label="Communication proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="bar high" style="width: 80%"></div>
                 </div>
               </section>
               <hr />
-              <h5 id="subdued">Linear, Discord, Jira, Confluence, Slack</h5>
+              <h5 class="subdued">Linear, Discord, Jira, Confluence, Slack</h5>
             </section>
           </section>
 
-          <section id="row">
-            <section id="technology">
-              <section id="technology-details">
+          <section class="row">
+            <section class="technology">
+              <section class="technology-details">
                 <h4>Backend</h4>
-                <div id="progress">
-                  <div id="bar" class="medium" style="width: 50%" />
+                <div class="progress" role="progressbar" aria-label="Backend proficiency" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  <div class="bar medium" style="width: 50%"></div>
                 </div>
               </section>
               <hr />
-              <h5 id="subdued">C#, node.js, Go</h5>
+              <h5 class="subdued">C#, node.js, Go</h5>
             </section>
 
-            <section id="technology">
-              <section id="technology-details">
+            <section class="technology">
+              <section class="technology-details">
                 <h4>DevOps</h4>
-                <div id="progress">
-                  <div id="bar" class="low" style="width: 33%" />
+                <div class="progress" role="progressbar" aria-label="DevOps proficiency" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                  <div class="bar low" style="width: 33%"></div>
                 </div>
               </section>
               <hr />
-              <h5 id="subdued">GitHub Actions, Octopus, Jenkins, Docker</h5>
+              <h5 class="subdued">GitHub Actions, Octopus, Jenkins, Docker</h5>
             </section>
           </section>
         </section>

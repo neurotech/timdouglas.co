@@ -35,13 +35,13 @@ main#cv {
     font-weight: 600;
   }
 
-  h5#subheading {
+  h5.subheading {
     margin-top: var(--spacing);
   }
 
-  h5#subdued {
+  h5.subdued {
     font-weight: 400;
-    font-size: 15px;
+    font-size: calc(var(--font-size) * 0.6);
     color: var(--waikawa);
   }
 
@@ -63,31 +63,28 @@ main#cv {
     }
   }
 
+  :is(.card, .technology) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: var(--brightwhite);
+    padding: var(--spacing);
+    border: 1px solid var(--separator);
+    border-radius: 4px;
+  }
+
   section#employment {
     display: flex;
     flex-direction: column;
 
-    section#cards {
+    section.cards {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: var(--spacing);
 
-      @media (max-width: 767px) {
-        flex-direction: column;
-        gap: var(--spacing);
-      }
-
-      section#card {
-        display: flex;
-        flex-direction: column;
+      section.card {
         gap: calc(var(--spacing) * 0.33);
-        flex: 1;
-
-        background: var(--brightwhite);
-        padding: var(--spacing);
-        border: 1px solid var(--separator);
-        border-radius: 4px;
 
         @media (max-width: 767px) {
           gap: calc(var(--spacing) * 0.5);
@@ -101,7 +98,7 @@ main#cv {
           height: 1px;
         }
 
-        section#row {
+        section.row {
           display: flex;
           justify-content: space-between;
 
@@ -150,7 +147,7 @@ main#cv {
     display: flex;
     flex-direction: column;
 
-    section#cards {
+    section.cards {
       display: flex;
       flex-direction: row;
       gap: var(--spacing);
@@ -160,17 +157,9 @@ main#cv {
         gap: var(--spacing);
       }
 
-      section#card {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+      section.card {
         gap: calc(var(--spacing) * 0.5);
         max-width: 50%;
-
-        background: var(--brightwhite);
-        padding: var(--spacing);
-        border: 1px solid var(--separator);
-        border-radius: 4px;
 
         @media (max-width: 767px) {
           width: 100%;
@@ -184,16 +173,12 @@ main#cv {
     display: flex;
     flex-direction: column;
 
-    section#cards {
+    section.cards {
       display: flex;
       flex-direction: column;
       gap: var(--spacing);
 
-      @media (max-width: 767px) {
-        gap: var(--spacing);
-      }
-
-      section#row {
+      section.row {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -207,17 +192,9 @@ main#cv {
       }
     }
 
-    section#technology {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
+    section.technology {
       gap: calc(var(--spacing) * 0.5);
       max-width: 50%;
-
-      background: var(--brightwhite);
-      padding: var(--spacing);
-      border: 1px solid var(--separator);
-      border-radius: 4px;
 
       @media (max-width: 767px) {
         width: 100%;
@@ -228,14 +205,14 @@ main#cv {
         width: 100%;
         margin: 0;
         height: 1px;
-        border-top: 1px dotted rgb(116, 132, 170);
+        border-top: 1px dotted var(--separator-dotted);
         border-left: none;
         border-right: none;
         border-bottom: none;
       }
     }
 
-    section#technology-details {
+    section.technology-details {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -243,7 +220,7 @@ main#cv {
     }
   }
 
-  #progress {
+  .progress {
     border-radius: 2px;
     height: 1.1rem;
     background-color: var(--progress-background);
@@ -251,7 +228,7 @@ main#cv {
     border: 2px solid var(--progress-background);
     box-shadow: 0 0 0 1px rgba(1, 1, 1, 0.15);
 
-    #bar {
+    .bar {
       border-radius: 1px;
       height: 100%;
 
@@ -265,13 +242,5 @@ main#cv {
         background-color: var(--green);
       }
     }
-  }
-
-  #chips {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing);
-    padding: 0 4px;
-    flex-wrap: wrap;
   }
 }

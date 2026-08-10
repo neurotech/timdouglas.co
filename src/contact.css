@@ -3,14 +3,14 @@ main#contact {
   flex-direction: column;
   gap: var(--spacing);
 
-  section#contact-card {
+  section.contact-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 4px;
     border: 2px solid var(--contact-card-variant-border);
 
-    #variant {
+    .variant {
       user-select: none;
       width: 8rem;
       display: flex;
@@ -29,7 +29,7 @@ main#contact {
       }
     }
 
-    #value {
+    .value {
       display: flex;
       cursor: pointer;
       justify-content: center;
