@@ -1,3 +1,32 @@
+a#download-cv {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 0.5);
+  text-decoration: none;
+  font-size: calc(var(--font-size) * 0.8);
+  color: var(--link);
+  padding: calc(var(--spacing) * 0.5);
+  border: 2px solid var(--separator);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  transition:
+    background-color 200ms ease-out,
+    border-color 200ms ease-out;
+
+  &:hover {
+    background-color: var(--separator);
+    color: var(--link-hover);
+
+    svg {
+      stroke: var(--link-hover);
+    }
+  }
+
+  svg {
+    stroke: var(--muted-link);
+  }
+}
+
 main#cv {
   display: flex;
   flex-direction: column;
@@ -73,7 +102,19 @@ main#cv {
     border-radius: 4px;
   }
 
-  section#employment {
+  section#about-me {
+    p {
+      font-size: calc(var(--font-size) * 0.65);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .card {
+      gap: var(--spacing);
+    }
+  }
+
+  section#experience {
     display: flex;
     flex-direction: column;
 
