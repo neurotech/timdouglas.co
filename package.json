@@ -1,23 +1,28 @@
 {
   "name": "timdouglas.co",
-  "private": true,
   "version": "1.0.0",
-  "author": "Tim Douglas",
+  "private": true,
   "description": "Source for http://timdouglas.co",
-  "scripts": {
-    "build": "tsc && vite build",
-    "check": "biome check --write",
-    "dev": "vite",
-    "lint": "biome check",
-    "preview": "vite preview"
-  },
+  "author": "Tim Douglas",
   "repository": {
     "type": "git",
     "url": "https://www.github.com/neurotech/timdouglas.co"
   },
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "lint": "oxlint --type-aware",
+    "lint:fix": "oxlint --type-aware --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "check": "oxlint --type-aware && oxfmt --check"
+  },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
     "@types/node": "^22.13.8",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
+    "oxlint-tsgolint": "^7.0.2007",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
