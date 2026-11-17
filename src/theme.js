@@ -8,7 +8,10 @@ function apply(theme) {
     const isDark = theme === "dark";
     toggle.textContent = isDark ? "☀️" : "🌙";
     toggle.setAttribute("aria-pressed", String(isDark));
-    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    toggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode",
+    );
   }
 }
 
@@ -22,8 +25,10 @@ toggle?.addEventListener("click", () => {
 });
 
 // Follow the OS preference until the user makes an explicit choice.
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
-  if (!localStorage.getItem("theme")) {
-    apply(event.matches ? "dark" : "light");
-  }
-});
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    if (!localStorage.getItem("theme")) {
+      apply(event.matches ? "dark" : "light");
+    }
+  });
